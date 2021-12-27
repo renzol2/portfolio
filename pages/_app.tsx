@@ -5,7 +5,7 @@ import './global.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} resetCSS>
       <Component {...pageProps} />
     </ChakraProvider>
   );

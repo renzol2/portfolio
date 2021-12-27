@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <meta name="description" content="i write code and music :)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <Box as="body" bgColor="#FFF1F1">
         <Navbar />
         <Heading as="h1" fontFamily="Sora">
           hi, i&apos;m renzo!
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <Heading as="h2" fontFamily="Roboto Mono">
           i write code and music :)
         </Heading>
-      </body>
+      </Box>
     </>
   );
 };
