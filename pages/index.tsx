@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Fade, Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
@@ -14,30 +14,32 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box as="body" bgColor="#EFD2D2" mx="2.2rem">
-        <Navbar />
-        <Heading
-          as="h1"
-          fontFamily="Sora"
-          fontSize="9.5rem"
-          mt="5rem"
-          mb="0.5rem"
-          _selection={{
-            background: '#D60270',
-          }}
-        >
-          {'> renzo ledesma'}
-        </Heading>
-        <Subtitle
-          props={{
-            w: '50%',
-            fontSize: '3.2rem',
-            lineHeight: '134%',
-            mt: '0',
-          }}
-        >
-          🌱 i’m a creative helping improve people’s lives through music and
-          tech.
-        </Subtitle>
+        <Fade in>
+          <Navbar />
+          <Heading
+            as="h1"
+            fontFamily="Sora"
+            fontSize="9.5rem"
+            mt="5rem"
+            mb="0.5rem"
+            _selection={{
+              background: '#D60270',
+            }}
+          >
+            {'> renzo ledesma'}
+          </Heading>
+          <Subtitle
+            props={{
+              w: '50%',
+              fontSize: '3.2rem',
+              lineHeight: '134%',
+              mt: '0',
+            }}
+          >
+            🌱 i’m a creative helping improve people’s lives through music and
+            tech.
+          </Subtitle>
+        </Fade>
       </Box>
     </>
   );
