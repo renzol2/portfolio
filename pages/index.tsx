@@ -1,41 +1,46 @@
-import { Heading, Link } from '@chakra-ui/react';
+import { Flex, Heading, Text, chakra } from '@chakra-ui/react';
 import Subtitle from '../components/Subtitle';
 import Page from '../components/Page';
 import type { NextPage } from 'next';
 import '@fontsource/sora/800.css';
+import { HIGHLIGHT_COLOR, NEUTRAL, PRIMARY_ACCENT } from '../theme/colors';
 
 const Home: NextPage = () => {
+  const HEADER_SIZE = { base: '3.4rem', sm: '8rem', lg: '9.5rem' };
   return (
     <Page>
-      <Heading
-        as="h1"
-        fontFamily="Sora"
-        fontSize={{ base: '4rem', sm: '8rem', lg: '9.5rem' }}
+      <Flex
+        alignItems={{ base: 'top', lg: 'center' }}
         mt="5rem"
         mb="0.5rem"
-        color="#404040"
         lineHeight="1"
-        _selection={{
-          background: '#D60270',
-        }}
-        _hover={{
-          color: 'maroon',
-          textDecor: 'underline dotted',
-        }}
       >
-        <Link
-          color="#8F8F8F"
+        <Text
+          fontSize={HEADER_SIZE}
+          color={NEUTRAL}
           _selection={{
-            background: '#D60270',
+            background: HIGHLIGHT_COLOR,
           }}
-          _hover={{
-            textDecor: 'none',
-          }}
+          fontFamily="Sora"
         >
           {'>'}
-        </Link>
-        {' renzo ledesma'}
-      </Heading>
+        </Text>
+        <Heading
+          as="h1"
+          fontFamily="Sora"
+          fontSize={HEADER_SIZE}
+          color="#404040"
+          _selection={{
+            background: HIGHLIGHT_COLOR,
+          }}
+          _hover={{
+            color: PRIMARY_ACCENT,
+            textDecor: 'underline dotted',
+          }}
+        >
+          {' renzo ledesma'}
+        </Heading>
+      </Flex>
       <Subtitle
         props={{
           w: { base: '100%', lg: '50%' },
@@ -44,7 +49,18 @@ const Home: NextPage = () => {
           mt: '0',
         }}
       >
-        🌱 i’m a creative helping improve people’s lives through music and tech.
+        🌱 i’m a{' '}
+        <chakra.span
+          textDecor="underline"
+          color={PRIMARY_ACCENT}
+          _hover={{
+            color: 'gray.200',
+            background: PRIMARY_ACCENT,
+          }}
+        >
+          creative
+        </chakra.span>{' '}
+        helping improve people’s lives through music and tech.
       </Subtitle>
     </Page>
   );

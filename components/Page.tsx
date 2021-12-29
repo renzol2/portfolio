@@ -18,9 +18,8 @@ export default function Page({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box
-        as="body"
-        mx="2.5%"
-        style={{ background: 'linear-gradient(to right, #F4DEE3, #EFD2D2)' }}
+        px="2.5%"
+        minH="100vh"
       >
         <Navbar />
         <ScaleFade in>{children}</ScaleFade>

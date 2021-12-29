@@ -1,11 +1,10 @@
 import {
-  BoxProps,
   Link as ChakraLink,
-  LinkBoxProps,
   LinkProps as ChakraLinkProps,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import '@fontsource/roboto-mono/200.css';
+import { HIGHLIGHT_COLOR } from '../theme/colors';
 
 interface LinkProps {
   text: string;
@@ -25,7 +24,7 @@ export default function Link({ text, path, props }: LinkProps) {
           textDecoration: 'underline wavy',
         }}
         _selection={{
-          background: '#D60270',
+          background: HIGHLIGHT_COLOR,
         }}
         {...props}
       >

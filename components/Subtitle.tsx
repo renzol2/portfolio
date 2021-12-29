@@ -1,5 +1,6 @@
 import { Heading, HeadingProps } from '@chakra-ui/react';
 import '@fontsource/sora/400.css';
+import { HIGHLIGHT_COLOR } from '../theme/colors';
 
 export default function Subtitle({
   props,
@@ -14,7 +15,7 @@ export default function Subtitle({
       fontFamily="Sora"
       fontWeight="normal"
       _selection={{
-        background: '#D60270',
+        background: HIGHLIGHT_COLOR,
       }}
       {...props}
     >

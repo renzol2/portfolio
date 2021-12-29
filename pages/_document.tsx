@@ -16,7 +16,9 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body
+          style={{ background: 'linear-gradient(to right, #F4DEE3, #EFD2D2)' }}
+        >
           <Main />
           <NextScript />
         </body>

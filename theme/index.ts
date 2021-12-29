@@ -5,6 +5,12 @@ const theme = extendTheme({
     heading: 'Sora',
     body: 'Roboto Mono',
   },
+  colors: {
+    accent: {
+      100: '#CE8BAE',
+      400: '#D60270',
+    },
+  },
 });
 
 export default theme;
