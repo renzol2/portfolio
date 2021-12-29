@@ -1,4 +1,4 @@
-import { Flex, Spacer, IconButton, Button } from '@chakra-ui/react';
+import { Flex, Spacer, IconButton, Button, Tooltip } from '@chakra-ui/react';
 import { MoonIcon } from '@chakra-ui/icons';
 import Link from './Link';
 import Logo from './Logo';
@@ -43,12 +43,18 @@ export default function Navbar() {
           <Link key={path} text={text} path={path} props={{ ml: '1.5rem' }} />
         ))}
       </Flex>
-      <IconButton
-        variant="outline"
-        aria-label="Dark mode button"
-        icon={<MoonIcon />}
-        ml="1.5rem"
-      />
+      <Tooltip
+        label="i'll make dark mode soon lol"
+        aria-label="dark mode not implemented"
+        placement="left"
+      >
+        <IconButton
+          variant="outline"
+          aria-label="Dark mode button"
+          icon={<MoonIcon />}
+          ml="1.5rem"
+        />
+      </Tooltip>
     </Flex>
   );
 }
