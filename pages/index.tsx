@@ -15,12 +15,21 @@ const Home: NextPage = () => {
       </Head>
       <Box as="body" bgColor="#EFD2D2" mx="2.2rem">
         <Navbar />
-        <Heading as="h1" fontFamily="Sora" fontSize="9.7rem" mt="5rem" mb="0.5rem">
+        <Heading
+          as="h1"
+          fontFamily="Sora"
+          fontSize="9.5rem"
+          mt="5rem"
+          mb="0.5rem"
+          _selection={{
+            background: '#D60270',
+          }}
+        >
           {'> renzo ledesma'}
         </Heading>
         <Subtitle
           props={{
-            w: '45%',
+            w: '50%',
             fontSize: '3.2rem',
             lineHeight: '134%',
             mt: '0',

@@ -1,4 +1,5 @@
-import { Flex, Heading, Spacer, Box } from '@chakra-ui/react';
+import { Flex, Spacer, IconButton, Button } from '@chakra-ui/react';
+import { MoonIcon } from '@chakra-ui/icons';
 import Link from './Link';
 import Logo from './Logo';
 
@@ -41,6 +42,11 @@ export default function Navbar() {
         {SECONDARY_NAV.map(({ text, path }) => (
           <Link key={path} text={text} path={path} props={{ ml: '1.5rem' }} />
         ))}
+        <IconButton
+          aria-label="Dark mode button"
+          icon={<MoonIcon />}
+          ml="1.5rem"
+        />
       </Flex>
     </Flex>
   );

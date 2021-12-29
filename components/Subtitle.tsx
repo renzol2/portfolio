@@ -10,7 +10,15 @@ export default function Subtitle({
   children: React.ReactNode;
 }) {
   return (
-    <Heading as="h2" fontFamily="Sora" fontWeight="normal" {...props}>
+    <Heading
+      as="h2"
+      fontFamily="Sora"
+      fontWeight="normal"
+      _selection={{
+        background: '#D60270',
+      }}
+      {...props}
+    >
       {children}
     </Heading>
   );

@@ -25,6 +25,9 @@ export default function Link({ text, path, props }: LinkProps) {
           color: 'gray',
           textDecoration: 'underline',
         }}
+        _selection={{
+          background: '#D60270',
+        }}
         {...props}
       >
         {text}
