@@ -10,7 +10,6 @@ import '@fontsource/roboto-mono/200.css';
 interface LinkProps {
   text: string;
   path: string;
-  // TODO: figure out how to pass Chakra Link props (for CSS props)
   props?: ChakraLinkProps;
 }
 
