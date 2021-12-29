@@ -19,7 +19,7 @@ export default function Page({
       </Head>
       <Box
         as="body"
-        mx="2.2rem"
+        mx="2.5%"
         style={{ background: 'linear-gradient(to right, #F4DEE3, #EFD2D2)' }}
       >
         <Navbar />

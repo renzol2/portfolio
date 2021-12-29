@@ -1,6 +1,6 @@
 import { Heading, Link } from '@chakra-ui/react';
-import Subtitle from '../../components/Subtitle';
-import Page from '../../components/Page';
+import Subtitle from '../components/Subtitle';
+import Page from '../components/Page';
 import type { NextPage } from 'next';
 import '@fontsource/sora/800.css';
 
@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <Heading
         as="h1"
         fontFamily="Sora"
-        fontSize="9.5rem"
+        fontSize={{ base: '4rem', sm: '8rem', lg: '9.5rem' }}
         mt="5rem"
         mb="0.5rem"
         color="#404040"
@@ -38,8 +38,8 @@ const Home: NextPage = () => {
       </Heading>
       <Subtitle
         props={{
-          w: '50%',
-          fontSize: '3.2rem',
+          w: { base: '100%', lg: '50%' },
+          fontSize: { base: '1rem', sm: '2rem', lg: '3.2rem' },
           lineHeight: '134%',
           mt: '0',
         }}

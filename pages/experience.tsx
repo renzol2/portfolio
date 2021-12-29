@@ -1,6 +1,6 @@
 import { Heading } from '@chakra-ui/react';
-import Subtitle from '../../components/Subtitle';
-import Page from '../../components/Page';
+import Subtitle from '../components/Subtitle';
+import Page from '../components/Page';
 import type { NextPage } from 'next';
 import '@fontsource/sora/800.css';
 
