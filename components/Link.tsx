@@ -22,7 +22,7 @@ export default function Link({ text, path, props }: LinkProps) {
         textDecoration="none"
         _hover={{
           color: 'gray',
-          textDecoration: 'underline',
+          textDecoration: 'underline wavy',
         }}
         _selection={{
           background: '#D60270',

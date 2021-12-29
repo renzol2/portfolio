@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, Link } from '@chakra-ui/react';
 import Subtitle from '../../components/Subtitle';
 import Page from '../../components/Page';
 import type { NextPage } from 'next';
@@ -13,11 +13,27 @@ const Home: NextPage = () => {
         fontSize="9.5rem"
         mt="5rem"
         mb="0.5rem"
+        color="#404040"
         _selection={{
           background: '#D60270',
         }}
+        _hover={{
+          color: 'maroon',
+          textDecor: 'underline dotted'
+        }}
       >
-        {'> renzo ledesma'}
+        <Link
+          color="#8F8F8F"
+          _selection={{
+            background: '#D60270',
+          }}
+          _hover={{
+            textDecor: 'none',
+          }}
+        >
+          {'>'}
+        </Link>
+        {' renzo ledesma'}
       </Heading>
       <Subtitle
         props={{
