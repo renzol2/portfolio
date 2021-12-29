@@ -1,6 +1,6 @@
 import { Flex, Heading, Spacer, Box } from '@chakra-ui/react';
-import '@fontsource/roboto-mono/200.css';
 import Link from './Link';
+import Logo from './Logo';
 
 export default function Navbar() {
   const PRIMARY_NAV = [
@@ -18,39 +18,30 @@ export default function Navbar() {
   const NAV_SIZE = '40%';
 
   return (
-    <Box>
+    <Flex as="nav" width="100%" alignItems="center" justifyContent="center">
       <Flex
-        as="nav"
-        width="95%"
-        mx="auto"
-        alignItems="center"
-        justifyContent="center"
+        justifyContent="flex-start"
+        minWidth={NAV_SIZE}
+        maxWidth={NAV_SIZE}
+        flexWrap="wrap"
       >
-        <Flex
-          justifyContent="flex-start"
-          minWidth={NAV_SIZE}
-          maxWidth={NAV_SIZE}
-          flexWrap="wrap"
-        >
-          {PRIMARY_NAV.map(({ text, path }) => (
-            <Link key={path} text={text} path={path} />
-          ))}
-        </Flex>
-        <Spacer />
-        <Heading>😊</Heading>
-        <Spacer />
-        <Flex
-          justifyContent="flex-end"
-          minWidth={NAV_SIZE}
-          maxWidth={NAV_SIZE}
-          flexWrap="wrap"
-        >
-          {SECONDARY_NAV.map(({ text, path }) => (
-            <Link key={path} text={text} path={path} />
-          ))}
-        </Flex>
+        {PRIMARY_NAV.map(({ text, path }) => (
+          <Link key={path} text={text} path={path} props={{ mr: '1.5rem' }} />
+        ))}
       </Flex>
-      <hr />
-    </Box>
+      <Spacer />
+      <Logo size={30} my="1rem" />
+      <Spacer />
+      <Flex
+        justifyContent="flex-end"
+        minWidth={NAV_SIZE}
+        maxWidth={NAV_SIZE}
+        flexWrap="wrap"
+      >
+        {SECONDARY_NAV.map(({ text, path }) => (
+          <Link key={path} text={text} path={path} props={{ ml: '1.5rem' }} />
+        ))}
+      </Flex>
+    </Flex>
   );
 }
