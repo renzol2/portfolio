@@ -61,6 +61,11 @@ const Home: NextPage = () => {
         <Hoverable color={MUSIC}>music</Hoverable> and{' '}
         <Hoverable color={TECH}>tech</Hoverable>.
       </Subtitle>
+      <Text w="50%" float="right" my="2rem">
+        currently a computer science + music major at the University of Illinois
+        at Urbana-Champaign studying the intersection between music, technology,
+        and culture.
+      </Text>
     </Page>
   );
 };

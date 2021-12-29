@@ -3,7 +3,7 @@ import {
   LinkProps as ChakraLinkProps,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import '@fontsource/roboto-mono/200.css';
+import '@fontsource/roboto-mono/400.css';
 import { HIGHLIGHT_COLOR } from '../theme/colors';
 
 interface LinkProps {
