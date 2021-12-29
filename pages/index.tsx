@@ -3,7 +3,14 @@ import Subtitle from '../components/Subtitle';
 import Page from '../components/Page';
 import type { NextPage } from 'next';
 import '@fontsource/sora/800.css';
-import { HIGHLIGHT_COLOR, NEUTRAL, PRIMARY_ACCENT } from '../theme/colors';
+import {
+  HIGHLIGHT_COLOR,
+  MUSIC,
+  NEUTRAL,
+  PRIMARY_ACCENT,
+  TECH,
+} from '../theme/colors';
+import Hoverable from '../components/Hoverable';
 
 const Home: NextPage = () => {
   const HEADER_SIZE = { base: '3.4rem', sm: '8rem', lg: '9.5rem' };
@@ -49,18 +56,10 @@ const Home: NextPage = () => {
           mt: '0',
         }}
       >
-        🌱 i’m a{' '}
-        <chakra.span
-          textDecor="underline"
-          color={PRIMARY_ACCENT}
-          _hover={{
-            color: 'gray.200',
-            background: PRIMARY_ACCENT,
-          }}
-        >
-          creative
-        </chakra.span>{' '}
-        helping improve people’s lives through music and tech.
+        🌱 i’m a <Hoverable color={PRIMARY_ACCENT}>creative</Hoverable> helping
+        improve people’s lives through{' '}
+        <Hoverable color={MUSIC}>music</Hoverable> and{' '}
+        <Hoverable color={TECH}>tech</Hoverable>.
       </Subtitle>
     </Page>
   );
