@@ -14,12 +14,13 @@ const Home: NextPage = () => {
         mt="5rem"
         mb="0.5rem"
         color="#404040"
+        lineHeight="1"
         _selection={{
           background: '#D60270',
         }}
         _hover={{
           color: 'maroon',
-          textDecor: 'underline dotted'
+          textDecor: 'underline dotted',
         }}
       >
         <Link
