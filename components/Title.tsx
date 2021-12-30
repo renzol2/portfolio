@@ -11,7 +11,7 @@ import '@fontsource/sora/800.css';
 
 export default function Title({ text }: { text: string }) {
   const HEADER_SIZE = {
-    base: '3.4rem',
+    base: '4rem',
     sm: '5.8rem',
     md: '8rem',
     lg: '9.5rem',
