@@ -25,6 +25,7 @@ export default function Navbar() {
         minWidth={NAV_SIZE}
         maxWidth={NAV_SIZE}
         flexWrap="wrap"
+        display={{ base: 'none', md: 'flex' }}
       >
         {PRIMARY_NAV.map(({ text, path }) => (
           <Link key={path} text={text} path={path} props={{ mr: '1.5rem' }} />
@@ -38,6 +39,7 @@ export default function Navbar() {
         minWidth={NAV_SIZE}
         maxWidth={NAV_SIZE}
         flexWrap="wrap"
+        display={{ base: 'none', md: 'flex' }}
       >
         {SECONDARY_NAV.map(({ text, path }) => (
           <Link key={path} text={text} path={path} props={{ ml: '1.5rem' }} />
@@ -53,6 +55,8 @@ export default function Navbar() {
           aria-label="Dark mode button"
           icon={<MoonIcon />}
           ml="1.5rem"
+          pos={{ base: 'absolute', md: 'relative' }}
+          right={4}
         />
       </Tooltip>
     </Flex>
