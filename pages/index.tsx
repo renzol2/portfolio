@@ -73,11 +73,23 @@ const Home: NextPage = () => {
       <Box w={{ base: '100%', lg: '50%' }} float="right" my="2rem">
         <Paragraph>
           currently a{' '}
-          <chakra.span textDecor="underline">
+          <chakra.span
+            textDecor="underline"
+            _selection={{
+              color: 'gray.100',
+              background: 'black',
+            }}
+          >
             computer science + music
           </chakra.span>{' '}
           major at the{' '}
-          <chakra.span fontWeight="black">
+          <chakra.span
+            fontWeight="black"
+            _selection={{
+              color: 'gray.100',
+              background: 'black',
+            }}
+          >
             University of Illinois at Urbana-Champaign
           </chakra.span>{' '}
           studying the intersection between music, technology, and culture.
