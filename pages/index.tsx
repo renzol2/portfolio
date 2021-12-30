@@ -14,6 +14,7 @@ import {
 import Hoverable from '../components/Hoverable';
 import { INSTAGRAM_URL, LINKEDIN_URL, SPOTIFY_URL } from '../constants/urls';
 import Paragraph from '../components/Paragraph';
+import Title from '../components/Title';
 
 const Home: NextPage = () => {
   const HEADER_SIZE = {
@@ -24,35 +25,7 @@ const Home: NextPage = () => {
   };
   return (
     <Page>
-      <Flex alignItems="center" mt="5rem" mb="0.5rem" lineHeight="1">
-        {/* Main header */}
-        <Text
-          fontSize={HEADER_SIZE}
-          color={NEUTRAL}
-          _selection={{
-            background: HIGHLIGHT_COLOR,
-          }}
-          fontFamily="Sora"
-          // display={{ base: 'none', md: 'block' }}
-        >
-          {'>'}
-        </Text>
-        <Heading
-          as="h1"
-          fontFamily="Sora"
-          fontSize={HEADER_SIZE}
-          color="#404040"
-          _selection={{
-            background: HIGHLIGHT_COLOR,
-          }}
-          _hover={{
-            color: PRIMARY_ACCENT,
-          }}
-          lineHeight={0.8}
-        >
-          {' renzo ledesma*'}
-        </Heading>
-      </Flex>
+      <Title text="renzo ledesma" />
 
       {/* Subtitle */}
       <Subtitle
