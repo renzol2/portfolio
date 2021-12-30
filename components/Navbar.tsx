@@ -54,7 +54,7 @@ export default function Navbar() {
           variant="outline"
           aria-label="Dark mode button"
           icon={<MoonIcon />}
-          ml="1.5rem"
+          ml="2rem"
           pos={{ base: 'absolute', md: 'relative' }}
           right={4}
         />
