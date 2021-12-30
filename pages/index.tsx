@@ -12,6 +12,8 @@ import {
   TECH,
 } from '../theme/colors';
 import Hoverable from '../components/Hoverable';
+import { INSTAGRAM_URL, LINKEDIN_URL, SPOTIFY_URL } from '../constants/urls';
+import Paragraph from '../components/Paragraph';
 
 const Home: NextPage = () => {
   const HEADER_SIZE = {
@@ -48,7 +50,7 @@ const Home: NextPage = () => {
           }}
           lineHeight={0.8}
         >
-          {' renzo ledesma'}
+          {' renzo ledesma*'}
         </Heading>
       </Flex>
 
@@ -69,23 +71,49 @@ const Home: NextPage = () => {
 
       {/* Hero text */}
       <Box w={{ base: '100%', lg: '50%' }} float="right" my="2rem">
-        <Text my="1rem">
-          currently a computer science + music major at the University of
-          Illinois at Urbana-Champaign studying the intersection between music,
-          technology, and culture.
-        </Text>
-        <Text my="1rem">thanks for checking me out!</Text>
+        <Paragraph>
+          currently a{' '}
+          <chakra.span textDecor="underline">
+            computer science + music
+          </chakra.span>{' '}
+          major at the{' '}
+          <chakra.span fontWeight="black">
+            University of Illinois at Urbana-Champaign
+          </chakra.span>{' '}
+          studying the intersection between music, technology, and culture.
+        </Paragraph>
+        <Paragraph>thanks for checking me out!</Paragraph>
         <Text>
-          <Hoverable color="gray" props={{ mr: 3 }}>
+          <Hoverable
+            color="gray"
+            props={{ mr: 3 }}
+            isLink
+            externalHref="https://github.com/renzol2"
+          >
             github
           </Hoverable>
-          <Hoverable color={TECH} props={{ mr: 3 }}>
+          <Hoverable
+            color={TECH}
+            props={{ mr: 3 }}
+            isLink
+            externalHref={LINKEDIN_URL}
+          >
             linkedin
           </Hoverable>
-          <Hoverable color={INSTAGRAM} props={{ mr: 3 }}>
+          <Hoverable
+            color={INSTAGRAM}
+            props={{ mr: 3 }}
+            isLink
+            externalHref={INSTAGRAM_URL}
+          >
             instagram
           </Hoverable>
-          <Hoverable color={MUSIC} props={{ mr: 3 }}>
+          <Hoverable
+            color={MUSIC}
+            props={{ mr: 3 }}
+            isLink
+            externalHref={SPOTIFY_URL}
+          >
             spotify
           </Hoverable>
         </Text>
