@@ -9,9 +9,7 @@ const Home: NextPage = () => {
   return (
     <Page>
       <Paragraph useMarginAbove={false}>hi i&apos;m renzo :)</Paragraph>
-      <Paragraph useMarginAbove={false}>
-        i write code and music 🌱
-      </Paragraph>
+      <Paragraph useMarginAbove={false}>i write code and music 🌱</Paragraph>
       <Hoverable
         color="gray"
         props={{ mr: 3 }}
