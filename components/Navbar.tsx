@@ -26,19 +26,26 @@ export default function Navbar() {
   const LOGO_SIZE = 40;
 
   return (
-    <Box>
-      <Box mb="2rem">
+    <Flex
+      flexDir={{ base: 'row', md: 'column' }}
+      alignItems={{ base: 'center' }}
+      mb="3rem"
+    >
+      <Box mb={{ base: 0, md: '2rem' }} mr={{ base: '2rem', md: 0 }}>
         <NextLink href="/" passHref>
           <ChakraLink>
             <Image src={logo} alt="logo" width={LOGO_SIZE} height={LOGO_SIZE} />
           </ChakraLink>
         </NextLink>
       </Box>
-      <Stack>
+      <Stack
+        direction={{ base: 'row', md: 'column' }}
+        spacing={{ base: '1rem', md: 0 }}
+      >
         {NAVIGATION.map(({ text, path }) => (
           <Link key={path} text={text} path={path} />
         ))}
       </Stack>
-    </Box>
+    </Flex>
   );
 }

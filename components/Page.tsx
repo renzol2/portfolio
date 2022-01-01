@@ -17,9 +17,13 @@ export default function Page({
         <meta name="description" content="i write code and music :)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Grid templateColumns="20% 80%" p="2.5%" minH="100vh">
+      <Grid
+        templateColumns={{ base: '100%', md: '20% 80%' }}
+        p="2.5%"
+        // minH="100vh"
+      >
         <Navbar />
-        <Fade in>{children}</Fade>
+        {children}
       </Grid>
     </>
   );
