@@ -1,21 +1,17 @@
 import {
   Flex,
-  Spacer,
-  IconButton,
-  Tooltip,
   Box,
   Link as ChakraLink,
   Stack,
+  useBreakpointValue,
 } from '@chakra-ui/react';
-import { MoonIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import Link from './Link';
 import Image from 'next/image';
-import Hoverable from './Hoverable';
-import { FOAM_URL } from '../constants/urls';
 import logo from '../public/assets/logo.svg';
 
 export default function Navbar() {
+  const logoSize = useBreakpointValue({ base: 30, md: 40 });
   const NAVIGATION = [
     { text: 'me', path: '/me' },
     // { text: 'projects', path: '/projects' },
@@ -23,18 +19,19 @@ export default function Navbar() {
     { text: 'music', path: '/music' },
   ];
 
-  const LOGO_SIZE = 40;
-
   return (
-    <Flex
-      flexDir={{ base: 'row', md: 'column' }}
-      alignItems={{ base: 'center' }}
-      mb="3rem"
-    >
+    <Flex flexDir={{ base: 'row', md: 'column' }} alignItems="center" mb="3rem">
       <Box mb={{ base: 0, md: '2rem' }} mr={{ base: '2rem', md: 0 }}>
         <NextLink href="/" passHref>
           <ChakraLink>
-            <Image src={logo} alt="logo" width={LOGO_SIZE} height={LOGO_SIZE} />
+            <Image
+              src={logo}
+              blurDataURL={logo}
+              alt="two pink curly braces"
+              placeholder="blur"
+              width={logoSize}
+              height={logoSize}
+            />
           </ChakraLink>
         </NextLink>
       </Box>
