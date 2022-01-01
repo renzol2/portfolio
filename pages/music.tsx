@@ -1,11 +1,12 @@
-import { Box, Text, Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import mdxComponents from '../components/mdxComponents';
 import Page from '../components/Page';
+import MusicContent from '../content/music.mdx';
 
 const Music: NextPage = () => {
   return (
     <Page>
-      <Heading>music</Heading>
+      <MusicContent components={mdxComponents} />
     </Page>
   );
 };

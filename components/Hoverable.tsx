@@ -7,13 +7,7 @@ export default function Hoverable({
   isLink = false,
   externalHref = '',
   props,
-}: {
-  color?: string;
-  children: React.ReactNode;
-  isLink?: boolean;
-  externalHref?: string;
-  props?: ChakraProps;
-}) {
+}: any) {
   const HoverableComponent = isLink ? Link : chakra.span;
   return (
     <HoverableComponent

@@ -1,6 +1,7 @@
 import { Box, Center, Fade, Grid } from '@chakra-ui/react';
 import Head from 'next/head';
 import React from 'react';
+import { TEXT } from '../theme/colors';
 import Navbar from './Navbar';
 
 export default function Page({
@@ -19,7 +20,7 @@ export default function Page({
       </Head>
       <Grid templateColumns={{ base: '100%', md: '20% 80%' }} p="2.5%">
         <Navbar />
-        <Box>{children}</Box>
+        <Box color={TEXT}>{children}</Box>
       </Grid>
     </>
   );

@@ -18,8 +18,8 @@ import logo from '../public/assets/logo.svg';
 export default function Navbar() {
   const NAVIGATION = [
     { text: 'me', path: '/me' },
-    { text: 'projects', path: '/projects' },
-    { text: 'posts', path: '/posts' },
+    // { text: 'projects', path: '/projects' },
+    // { text: 'posts', path: '/posts' },
     { text: 'music', path: '/music' },
   ];
 
