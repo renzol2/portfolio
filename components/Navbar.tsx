@@ -1,84 +1,46 @@
 import {
   Flex,
-  Spacer,
-  IconButton,
-  Tooltip,
   Box,
   Link as ChakraLink,
+  Stack,
+  useBreakpointValue,
 } from '@chakra-ui/react';
-import { MoonIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import Link from './Link';
 import Image from 'next/image';
-import Hoverable from './Hoverable';
-import { FOAM_URL } from '../constants/urls';
 import logo from '../public/assets/logo.svg';
 
 export default function Navbar() {
-  const PRIMARY_NAV = [
-    { text: 'about', path: '/about' },
-    { text: 'projects', path: '/projects' },
-    { text: 'posts', path: '/posts' },
+  const logoSize = useBreakpointValue({ base: 30, md: 40 });
+  const NAVIGATION = [
+    { text: 'me', path: '/me' },
+    // { text: 'projects', path: '/projects' },
+    // { text: 'posts', path: '/posts' },
+    { text: 'music', path: '/music' },
   ];
 
-  const SECONDARY_NAV = [{ text: 'music', path: '/music' }];
-
-  const NAV_SIZE = '40%';
-
   return (
-    <Flex as="nav" width="100%" alignItems="center" justifyContent="center">
-      <Box mr="2rem" my="1rem" width={8} height={8}>
+    <Flex flexDir={{ base: 'row', md: 'column' }} alignItems="center" mb="3rem">
+      <Box mb={{ base: 0, md: '2rem' }} mr={{ base: '2rem', md: 0 }}>
         <NextLink href="/" passHref>
           <ChakraLink>
-            <Image src={logo} alt="logo" />
+            <Image
+              src={logo}
+              alt="two pink curly braces"
+              width={logoSize}
+              height={logoSize}
+            />
           </ChakraLink>
         </NextLink>
       </Box>
-      <Flex
-        justifyContent="flex-start"
-        minWidth={NAV_SIZE}
-        maxWidth={NAV_SIZE}
-        flexWrap="wrap"
-        display={{ base: 'none', md: 'flex' }}
+      <Stack
+        direction={{ base: 'row', md: 'column' }}
+        spacing={{ base: '1rem', md: 0 }}
       >
-        {PRIMARY_NAV.map(({ text, path }) => (
-          <Link key={path} text={text} path={path} props={{ mr: '1.5rem' }} />
+        {NAVIGATION.map(({ text, path }) => (
+          <Link key={path} text={text} path={path} />
         ))}
-      </Flex>
-      <Spacer />
-      <Flex
-        justifyContent="flex-end"
-        minWidth={NAV_SIZE}
-        maxWidth={NAV_SIZE}
-        flexWrap="wrap"
-        display={{ base: 'none', md: 'flex' }}
-      >
-        {SECONDARY_NAV.map(({ text, path }) => (
-          <Link key={path} text={text} path={path} props={{ ml: '1.5rem' }} />
-        ))}
-        <Hoverable
-          color="gray"
-          isLink
-          externalHref={FOAM_URL}
-          props={{ ml: '1.5rem' }}
-        >
-          foam
-        </Hoverable>
-      </Flex>
-      <Tooltip
-        label="i'll make dark mode soon lol"
-        aria-label="dark mode not implemented"
-        placement="left"
-      >
-        <IconButton
-          variant="outline"
-          aria-label="Dark mode button"
-          icon={<MoonIcon />}
-          ml="2rem"
-          pos={{ base: 'absolute', md: 'relative' }}
-          right={4}
-        />
-      </Tooltip>
+      </Stack>
     </Flex>
   );
 }

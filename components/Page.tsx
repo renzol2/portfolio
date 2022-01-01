@@ -1,6 +1,7 @@
-import { Box, ScaleFade } from '@chakra-ui/react';
+import { Box, Center, Fade, Grid } from '@chakra-ui/react';
 import Head from 'next/head';
 import React from 'react';
+import { TEXT } from '../theme/colors';
 import Navbar from './Navbar';
 
 export default function Page({
@@ -17,13 +18,15 @@ export default function Page({
         <meta name="description" content="i write code and music :)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box
-        px="2.5%"
-        minH="100vh"
+      <Grid
+        templateColumns={{ base: '100%', md: '35% 65%' }}
+        px={{ base: '7%', md: '2.5%' }}
+        pt={{ base: '6%', md: '3%' }}
+        pb="7rem"
       >
         <Navbar />
-        <ScaleFade in>{children}</ScaleFade>
-      </Box>
+        <Box color={TEXT}>{children}</Box>
+      </Grid>
     </>
   );
 }

@@ -1,14 +1,14 @@
 import type { NextPage } from 'next';
 import mdxComponents from '../components/mdxComponents';
 import Page from '../components/Page';
-import MusicContent from '../content/music.mdx';
+import Me from '../content/me.mdx';
 
-const Music: NextPage = () => {
+const About: NextPage = () => {
   return (
     <Page>
-      <MusicContent components={mdxComponents} />
+      <Me components={mdxComponents} />
     </Page>
   );
 };
 
-export default Music;
+export default About;

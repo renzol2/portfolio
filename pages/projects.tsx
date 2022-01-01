@@ -1,14 +1,11 @@
-import Page from '../components/Page';
+import { Box, Text, Heading } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import '@fontsource/sora/800.css';
-import Title from '../components/Title';
-import Paragraph from '../components/Paragraph';
+import Page from '../components/Page';
 
 const Projects: NextPage = () => {
   return (
     <Page>
-      <Title text="projects" />
-      <Paragraph>wip :)</Paragraph>
+      <Heading>projects</Heading>
     </Page>
   );
 };
