@@ -17,6 +17,7 @@ export default function Navbar() {
     // { text: 'projects', path: '/projects' },
     // { text: 'posts', path: '/posts' },
     { text: 'music', path: '/music' },
+    { text: 'garden', path: '/garden' },
   ];
 
   return (
