@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
   fonts: {
-    heading: 'Sora',
+    heading: 'Roboto Mono',
     body: 'Roboto Mono',
   },
   colors: {

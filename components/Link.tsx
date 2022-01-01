@@ -26,6 +26,7 @@ export default function Link({ text, path, props }: LinkProps) {
         _selection={{
           background: HIGHLIGHT_COLOR,
         }}
+        width="auto"
         {...props}
       >
         {text}

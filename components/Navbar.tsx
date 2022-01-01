@@ -5,6 +5,7 @@ import {
   Tooltip,
   Box,
   Link as ChakraLink,
+  Stack,
 } from '@chakra-ui/react';
 import { MoonIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
@@ -15,70 +16,29 @@ import { FOAM_URL } from '../constants/urls';
 import logo from '../public/assets/logo.svg';
 
 export default function Navbar() {
-  const PRIMARY_NAV = [
-    { text: 'about', path: '/about' },
+  const NAVIGATION = [
+    { text: 'me', path: '/me' },
     { text: 'projects', path: '/projects' },
     { text: 'posts', path: '/posts' },
+    { text: 'music', path: '/music' },
   ];
 
-  const SECONDARY_NAV = [{ text: 'music', path: '/music' }];
-
-  const NAV_SIZE = '40%';
+  const LOGO_SIZE = 40;
 
   return (
-    <Flex as="nav" width="100%" alignItems="center" justifyContent="center">
-      <Box mr="2rem" my="1rem" width={8} height={8}>
+    <Box>
+      <Box mb="2rem">
         <NextLink href="/" passHref>
           <ChakraLink>
-            <Image src={logo} alt="logo" />
+            <Image src={logo} alt="logo" width={LOGO_SIZE} height={LOGO_SIZE} />
           </ChakraLink>
         </NextLink>
       </Box>
-      <Flex
-        justifyContent="flex-start"
-        minWidth={NAV_SIZE}
-        maxWidth={NAV_SIZE}
-        flexWrap="wrap"
-        display={{ base: 'none', md: 'flex' }}
-      >
-        {PRIMARY_NAV.map(({ text, path }) => (
-          <Link key={path} text={text} path={path} props={{ mr: '1.5rem' }} />
+      <Stack>
+        {NAVIGATION.map(({ text, path }) => (
+          <Link key={path} text={text} path={path} />
         ))}
-      </Flex>
-      <Spacer />
-      <Flex
-        justifyContent="flex-end"
-        minWidth={NAV_SIZE}
-        maxWidth={NAV_SIZE}
-        flexWrap="wrap"
-        display={{ base: 'none', md: 'flex' }}
-      >
-        {SECONDARY_NAV.map(({ text, path }) => (
-          <Link key={path} text={text} path={path} props={{ ml: '1.5rem' }} />
-        ))}
-        <Hoverable
-          color="gray"
-          isLink
-          externalHref={FOAM_URL}
-          props={{ ml: '1.5rem' }}
-        >
-          foam
-        </Hoverable>
-      </Flex>
-      <Tooltip
-        label="i'll make dark mode soon lol"
-        aria-label="dark mode not implemented"
-        placement="left"
-      >
-        <IconButton
-          variant="outline"
-          aria-label="Dark mode button"
-          icon={<MoonIcon />}
-          ml="2rem"
-          pos={{ base: 'absolute', md: 'relative' }}
-          right={4}
-        />
-      </Tooltip>
-    </Flex>
+      </Stack>
+    </Box>
   );
 }
