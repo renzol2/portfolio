@@ -19,7 +19,7 @@ export default function Page({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Grid
-        templateColumns={{ base: '100%', md: '20% 80%' }}
+        templateColumns={{ base: '100%', md: '35% 65%' }}
         px={{ base: '7%', md: '2.5%' }}
         pt={{ base: '6%', md: '3%' }}
         pb="7rem"
