@@ -8,7 +8,7 @@ import { INSTAGRAM, TECH, MUSIC } from '../theme/colors';
 const Home: NextPage = () => {
   return (
     <Page>
-      <Paragraph useMarginAbove={false}>hi i&apos;m renzo</Paragraph>
+      <Paragraph useMarginAbove={false}>hi i&apos;m renzo :)</Paragraph>
       <Paragraph useMarginAbove={false}>
         i write code and music 🌱
       </Paragraph>

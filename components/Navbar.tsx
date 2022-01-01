@@ -26,9 +26,7 @@ export default function Navbar() {
           <ChakraLink>
             <Image
               src={logo}
-              blurDataURL={logo}
               alt="two pink curly braces"
-              placeholder="blur"
               width={logoSize}
               height={logoSize}
             />
