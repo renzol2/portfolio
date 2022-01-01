@@ -4,7 +4,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import '@fontsource/roboto-mono/400.css';
-import { HIGHLIGHT_COLOR } from '../theme/colors';
+import { HIGHLIGHT_COLOR, TEXT } from '../theme/colors';
 
 interface LinkProps {
   text: string;
@@ -16,8 +16,7 @@ export default function Link({ text, path, props }: LinkProps) {
   return (
     <NextLink key={path} href={path} passHref>
       <ChakraLink
-        // fontFamily="Roboto Mono"
-        color="black"
+        color={TEXT}
         textDecoration="none"
         _hover={{
           color: 'gray',

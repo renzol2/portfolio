@@ -1,5 +1,5 @@
 import { Text } from '@chakra-ui/react';
-import { HIGHLIGHT_COLOR } from '../theme/colors';
+import { HIGHLIGHT_COLOR, TEXT } from '../theme/colors';
 
 export default function Paragraph({
   children,
@@ -15,6 +15,7 @@ export default function Paragraph({
       _selection={{
         background: HIGHLIGHT_COLOR,
       }}
+      color={TEXT}
     >
       {children}
     </Text>
