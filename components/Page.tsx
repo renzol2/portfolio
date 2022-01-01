@@ -1,4 +1,4 @@
-import { Box, Fade, Grid } from '@chakra-ui/react';
+import { Box, Center, Fade, Grid } from '@chakra-ui/react';
 import Head from 'next/head';
 import React from 'react';
 import Navbar from './Navbar';
@@ -17,13 +17,9 @@ export default function Page({
         <meta name="description" content="i write code and music :)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Grid
-        templateColumns={{ base: '100%', md: '20% 80%' }}
-        p="2.5%"
-        // minH="100vh"
-      >
+      <Grid templateColumns={{ base: '100%', md: '20% 80%' }} p="2.5%">
         <Navbar />
-        {children}
+        <Box>{children}</Box>
       </Grid>
     </>
   );

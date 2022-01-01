@@ -16,7 +16,7 @@ export default function Link({ text, path, props }: LinkProps) {
   return (
     <NextLink key={path} href={path} passHref>
       <ChakraLink
-        fontFamily="Roboto Mono"
+        // fontFamily="Roboto Mono"
         color="black"
         textDecoration="none"
         _hover={{
