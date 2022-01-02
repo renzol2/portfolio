@@ -18,6 +18,7 @@ export default function Navbar() {
     // { text: 'posts', path: '/posts' },
     { text: 'music', path: '/music' },
     { text: 'garden', path: '/garden' },
+    { text: 'superheroes', path: '/superheroes' },
   ];
 
   return (

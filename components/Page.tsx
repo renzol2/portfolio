@@ -25,7 +25,7 @@ export default function Page({
         pb="7rem"
       >
         <Navbar />
-        <Box color={TEXT}>{children}</Box>
+        <Box color={TEXT} pr={{ base: 0, md: '10%' }}>{children}</Box>
       </Grid>
     </>
   );
