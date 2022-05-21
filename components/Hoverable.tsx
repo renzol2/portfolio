@@ -13,7 +13,6 @@ export default function Hoverable({
   return (
     <HoverableComponent
       textDecor="underline"
-      letterSpacing="-0.05rem"
       color={color}
       _hover={{
         color: 'gray.200',

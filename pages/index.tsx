@@ -1,13 +1,13 @@
-import { Box, SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
+import { SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Page from '../components/Page';
 import ProjectPreview from '../components/ProjectPreview';
 
 const PROJECTS = [
   {
-    imgSrc: '/images/pan_lang.png',
-    alt: 'Pan Lang',
-    href: '/pan-lang',
+    imgSrc: '/images/kapit_bisig.png',
+    alt: 'Kapit Bisig',
+    href: '/kapit-bisig',
   },
   {
     imgSrc: '/images/digital_garden.png',
@@ -15,14 +15,14 @@ const PROJECTS = [
     href: '/garden',
   },
   {
-    imgSrc: '/images/superheroes.png',
-    alt: 'Superheroes',
-    href: '/superheroes',
-  },
-  {
     imgSrc: '/images/fact.png',
     alt: 'FACT',
     href: '/fact',
+  },
+  {
+    imgSrc: '/images/superheroes.png',
+    alt: 'Superheroes',
+    href: '/superheroes',
   },
   {
     imgSrc: '/images/out_of_time.png',
@@ -30,9 +30,9 @@ const PROJECTS = [
     href: '/out-of-time',
   },
   {
-    imgSrc: '/images/kapit_bisig.png',
-    alt: 'Kapit Bisig',
-    href: '/kapit-bisig',
+    imgSrc: '/images/pan_lang.png',
+    alt: 'Pan Lang',
+    href: '/pan-lang',
   },
 ];
 

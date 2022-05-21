@@ -1,4 +1,4 @@
-import { Box, Image } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 const ProjectPreview = ({ imgSrc, href }: { imgSrc: string; href: string }) => (

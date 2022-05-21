@@ -6,13 +6,16 @@ import Page from '../components/Page';
 import OutOfTimeContent from '../content/out-of-time.mdx';
 
 const OutOfTime: NextPage = () => {
+  const IMAGE_SOURCE = '/images/out_of_time.png';
   return (
     <Page>
       <Image
-        src="/images/out_of_time.png"
+        src={IMAGE_SOURCE}
         alt="Out of Time"
         width={1920}
         height={999}
+        placeholder="blur"
+        blurDataURL={IMAGE_SOURCE}
       />
       <OutOfTimeContent components={mdxComponents} />
       <Box w={{ base: '90%', md: '60%' }} my="2rem">

@@ -7,7 +7,7 @@ export default function Logo() {
   return (
     <Link href="/" passHref>
       <ChakraLink>
-        <Image src={logo} alt="logo" />
+        <Image src={logo} alt="logo" placeholder="blur" blurDataURL={logo} />
       </ChakraLink>
     </Link>
   );

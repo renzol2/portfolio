@@ -4,10 +4,9 @@ import {
   OrderedList,
   ListItem,
   Heading,
-  useBreakpointValue,
 } from '@chakra-ui/react';
 import Hoverable from './Hoverable';
-import { HIGHLIGHT_COLOR, PRIMARY_ACCENT, TEXT } from '../theme/colors';
+import { HIGHLIGHT_COLOR, TEXT } from '../theme/colors';
 
 const TEXT_SIDE_MARGINS = { base: '7%', lg: '25%' };
 
@@ -67,6 +66,16 @@ const mdxComponents = {
         background: HIGHLIGHT_COLOR,
       }}
       color={TEXT}
+      {...props}
+    />
+  ),
+  strong: (props: any) => (
+    <Text
+      as="strong"
+      _selection={{
+        background: HIGHLIGHT_COLOR,
+      }}
+      fontWeight="bold"
       {...props}
     />
   ),

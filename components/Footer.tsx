@@ -1,4 +1,4 @@
-import { Box, Flex, Spacer } from '@chakra-ui/react';
+import { Box, Flex, Spacer, Text } from '@chakra-ui/react';
 import Hoverable from './Hoverable';
 import Link from './Link';
 import Logo from './Logo';

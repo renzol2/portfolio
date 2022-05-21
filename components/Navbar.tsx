@@ -5,6 +5,7 @@ import {
   useBreakpointValue,
   Text,
   Spacer,
+  Heading,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import Link from './Link';
@@ -26,7 +27,9 @@ export default function Navbar() {
     <Flex flexDir="row" alignItems="center" mb="1rem" w="100%">
       {/* Logo + name */}
       <NextLink href="/" passHref>
-        <ChakraLink>
+        <ChakraLink _hover={{
+          textDecor: 'none'
+        }}>
           <Flex flexDir="row" alignItems="center">
             <Image
               src={logo}
@@ -34,20 +37,22 @@ export default function Navbar() {
               width={logoSize}
               height={logoSize}
             />
-            <Text
+            <Heading
+              fontWeight="light"
               fontSize={{ base: '2rem', md: '2.5rem' }}
               ml="3"
               letterSpacing="-0.2rem"
               color={PRIMARY_ACCENT}
               _hover={{
-                textDecoration: 'none',
+                textDecoration: 'underline wavy',
+                textDecorationThickness: '2px'
               }}
               _selection={{
                 background: HIGHLIGHT_COLOR,
               }}
             >
               renzo ledesma
-            </Text>
+            </Heading>
           </Flex>
         </ChakraLink>
       </NextLink>

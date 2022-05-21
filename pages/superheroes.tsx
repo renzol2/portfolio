@@ -5,13 +5,17 @@ import Page from '../components/Page';
 import SuperheroesContent from '../content/superheroes.mdx';
 
 const Superheroes: NextPage = () => {
+  const IMAGE_SOURCE = '/images/superheroes.png';
+
   return (
     <Page>
       <Image
-        src="/images/superheroes.png"
+        src={IMAGE_SOURCE}
         alt="Superheroes"
         width={1896}
         height={1080}
+        placeholder="blur"
+        blurDataURL={IMAGE_SOURCE}
       />
       <SuperheroesContent components={mdxComponents} />
     </Page>
