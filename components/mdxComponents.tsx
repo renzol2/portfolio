@@ -11,7 +11,7 @@ import { HIGHLIGHT_COLOR, PRIMARY_ACCENT, TEXT } from '../theme/colors';
 
 const TEXT_SIDE_MARGINS = { base: '7%', lg: '25%' };
 
-const MdxComponents = {
+const mdxComponents = {
   h1: (props: any) => (
     <Heading
       as="h1"
@@ -61,7 +61,7 @@ const MdxComponents = {
   ),
   p: (props: any) => (
     <Text
-      my="1rem"
+      my="0.8rem"
       mx={TEXT_SIDE_MARGINS}
       _selection={{
         background: HIGHLIGHT_COLOR,
@@ -84,4 +84,4 @@ const MdxComponents = {
   a: (props: any) => <Hoverable externalHref={props.href} isLink {...props} />,
 };
 
-export default MdxComponents;
+export default mdxComponents;

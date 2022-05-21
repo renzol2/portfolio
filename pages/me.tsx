@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
-import MdxComponents from '../components/MdxComponents';
+import mdxComponents from '../components/mdxComponents';
 import Page from '../components/Page';
 import Me from '../content/me.mdx';
 
 const About: NextPage = () => {
   return (
     <Page>
-      <Me components={MdxComponents} />
+      <Me components={mdxComponents} />
     </Page>
   );
 };

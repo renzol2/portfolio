@@ -1,12 +1,19 @@
 import type { NextPage } from 'next';
-import MdxComponents from '../components/MdxComponents';
+import Image from 'next/image';
+import mdxComponents from '../components/mdxComponents';
 import Page from '../components/Page';
 import SuperheroesContent from '../content/superheroes.mdx';
 
 const Superheroes: NextPage = () => {
   return (
     <Page>
-      <SuperheroesContent components={MdxComponents} />
+      <Image
+        src="/images/superheroes.png"
+        alt="Superheroes"
+        width={1896}
+        height={1080}
+      />
+      <SuperheroesContent components={mdxComponents} />
     </Page>
   );
 };

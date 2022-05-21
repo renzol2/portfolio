@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import MdxComponents from '../components/MdxComponents';
+import mdxComponents from '../components/mdxComponents'
 import Page from '../components/Page';
 import GardenContent from '../content/garden.mdx';
 
@@ -13,7 +13,7 @@ const Garden: NextPage = () => {
         width={1212}
         height={817}
       />
-      <GardenContent components={MdxComponents} />
+      <GardenContent components={mdxComponents} />
     </Page>
   );
 };
