@@ -3,7 +3,23 @@ import type { NextPage } from 'next';
 import Page from '../components/Page';
 import ProjectPreview from '../components/ProjectPreview';
 
-const PROJECTS = Array(9).fill(0);
+const PROJECTS = [
+  {
+    imgSrc: '/images/pan_lang.png',
+    alt: 'Pan Lang',
+    href: '/pan-lang',
+  },
+  {
+    imgSrc: '/images/digital_garden.png',
+    alt: 'Digital Garden',
+    href: '/garden',
+  },
+  {
+    imgSrc: '/images/superheroes.png',
+    alt: 'Superheroes',
+    href: '/superheroes',
+  },
+];
 
 const Home: NextPage = () => {
   const columns = useBreakpointValue({ base: 1, lg: 3 });
@@ -11,8 +27,8 @@ const Home: NextPage = () => {
   return (
     <Page>
       <SimpleGrid columns={columns} spacing="1rem">
-        {PROJECTS.map((_, i) => (
-          <ProjectPreview key={i} />
+        {PROJECTS.map(({ imgSrc, href }, i) => (
+          <ProjectPreview key={i} imgSrc={imgSrc} href={href} />
         ))}
       </SimpleGrid>
     </Page>

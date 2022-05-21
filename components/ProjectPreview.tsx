@@ -1,11 +1,21 @@
-import { Box } from '@chakra-ui/react';
-import { RANDOM_COLORS } from '../theme/colors';
+import { Box, Image } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
-const ProjectPreview = () => (
-  <Box
-    bg={RANDOM_COLORS[Math.floor(Math.random() * RANDOM_COLORS.length)]}
-    height="28rem"
-  />
+const ProjectPreview = ({ imgSrc, href }: { imgSrc: string; href: string }) => (
+  <NextLink href={href} passHref>
+    <a>
+      <Image
+        src={imgSrc}
+        fit="cover"
+        alt="alt text"
+        height="28rem"
+        _hover={{
+          transition: 'opacity 0.2s',
+          opacity: 0.7,
+        }}
+      />
+    </a>
+  </NextLink>
 );
 
 export default ProjectPreview;
