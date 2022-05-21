@@ -1,6 +1,7 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex, Spacer } from '@chakra-ui/react';
 import Head from 'next/head';
 import React from 'react';
+import Footer from './Footer';
 import Navbar from './Navbar';
 
 export default function Page({
@@ -17,10 +18,12 @@ export default function Page({
         <meta name="description" content="i write code and music :)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box px="2.5%" pt="2%">
+      <Flex flexDir="column" minH="100vh" px="2.5%" pt="2%">
         <Navbar />
         {children}
-      </Box>
+        <Spacer />
+        <Footer />
+      </Flex>
     </>
   );
 }

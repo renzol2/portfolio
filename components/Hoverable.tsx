@@ -1,17 +1,19 @@
-import { chakra, ChakraProps, Link } from '@chakra-ui/react';
+import { chakra, Link } from '@chakra-ui/react';
 import { PRIMARY_ACCENT } from '../theme/colors';
 
 export default function Hoverable({
   color = PRIMARY_ACCENT,
   children,
   isLink = false,
-  externalHref = '',
+  isExternal = true,
+  href = '',
   props,
 }: any) {
   const HoverableComponent = isLink ? Link : chakra.span;
   return (
     <HoverableComponent
       textDecor="underline"
+      letterSpacing="-0.05rem"
       color={color}
       _hover={{
         color: 'gray.200',
@@ -20,8 +22,8 @@ export default function Hoverable({
       _selection={{
         background: 'black',
       }}
-      href={externalHref}
-      isExternal
+      href={href}
+      isExternal={isExternal}
       {...props}
     >
       {children}

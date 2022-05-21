@@ -13,6 +13,7 @@ import logo from '../public/assets/logo.svg';
 import Hoverable from './Hoverable';
 import { INSTAGRAM, MUSIC, PRIMARY_ACCENT, TECH } from '../theme/colors';
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from '../constants/urls';
+import Socials from './Socials';
 
 export default function Navbar() {
   const logoSize = useBreakpointValue({ base: 40, md: 50 });
@@ -47,18 +48,7 @@ export default function Navbar() {
       <Spacer />
 
       {/* Navigation */}
-      <Stack direction={{ base: 'column', md: 'row' }} spacing="1rem">
-        <Link text="me" path="/me" />
-        <Hoverable color="gray" isLink externalHref={GITHUB_URL}>
-          github
-        </Hoverable>
-        <Hoverable color={TECH} isLink externalHref={LINKEDIN_URL}>
-          linkedin
-        </Hoverable>
-        <Hoverable color={INSTAGRAM} isLink externalHref={INSTAGRAM_URL}>
-          instagram
-        </Hoverable>
-      </Stack>
+      <Socials />
     </Flex>
   );
 }
