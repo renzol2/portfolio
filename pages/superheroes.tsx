@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
-import mdxComponents from '../components/mdxComponents';
+import MdxComponents from '../components/MdxComponents';
 import Page from '../components/Page';
 import SuperheroesContent from '../content/superheroes.mdx';
 
 const Superheroes: NextPage = () => {
   return (
     <Page>
-      <SuperheroesContent components={mdxComponents} />
+      <SuperheroesContent components={MdxComponents} />
     </Page>
   );
 };

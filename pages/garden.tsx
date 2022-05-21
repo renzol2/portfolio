@@ -1,12 +1,19 @@
 import type { NextPage } from 'next';
-import mdxComponents from '../components/mdxComponents';
+import Image from 'next/image';
+import MdxComponents from '../components/MdxComponents';
 import Page from '../components/Page';
 import GardenContent from '../content/garden.mdx';
 
 const Garden: NextPage = () => {
   return (
     <Page>
-      <GardenContent components={mdxComponents} />
+      <Image
+        src="/images/digital_garden.png"
+        alt="Digital Garden"
+        width={1212}
+        height={817}
+      />
+      <GardenContent components={MdxComponents} />
     </Page>
   );
 };

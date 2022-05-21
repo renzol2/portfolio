@@ -10,9 +10,13 @@ import NextLink from 'next/link';
 import Link from './Link';
 import Image from 'next/image';
 import logo from '../public/assets/logo.svg';
-import Hoverable from './Hoverable';
-import { INSTAGRAM, MUSIC, PRIMARY_ACCENT, TECH } from '../theme/colors';
-import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from '../constants/urls';
+import {
+  HIGHLIGHT_COLOR,
+  INSTAGRAM,
+  MUSIC,
+  PRIMARY_ACCENT,
+  TECH,
+} from '../theme/colors';
 import Socials from './Socials';
 
 export default function Navbar() {
@@ -31,15 +35,18 @@ export default function Navbar() {
               height={logoSize}
             />
             <Text
-              fontSize="2.5rem"
+              fontSize={{ base: '2rem', md: '2.5rem' }}
               ml="3"
               letterSpacing="-0.2rem"
               color={PRIMARY_ACCENT}
               _hover={{
                 textDecoration: 'none',
               }}
+              _selection={{
+                background: HIGHLIGHT_COLOR,
+              }}
             >
-              Renzo Ledesma
+              renzo ledesma
             </Text>
           </Flex>
         </ChakraLink>

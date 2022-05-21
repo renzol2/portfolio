@@ -5,7 +5,7 @@ import Socials from './Socials';
 
 const Footer = () => {
   return (
-    <Flex flexDir="row" alignItems="center" py="2rem">
+    <Flex flexDir={{ base: 'column-reverse', lg: 'row' }} alignItems="center" py="2rem">
       <Hoverable
         isLink
         isExternal="false"
@@ -13,8 +13,8 @@ const Footer = () => {
       >
         renzomledesma@gmail.com
       </Hoverable>
-      <Spacer />
-      <Socials />
+      <Spacer py={{ base: '0.7rem', lg: '0' }} />
+      <Socials showDropdownOnMobile={false} />
     </Flex>
   );
 };
