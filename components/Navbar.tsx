@@ -1,47 +1,68 @@
 import {
   Flex,
-  Box,
   Link as ChakraLink,
   Stack,
   useBreakpointValue,
+  Text,
+  Spacer,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import Link from './Link';
 import Image from 'next/image';
 import logo from '../public/assets/logo.svg';
+import Hoverable from './Hoverable';
+import { INSTAGRAM, MUSIC, PRIMARY_ACCENT, TECH } from '../theme/colors';
+import {
+  GITHUB_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  SPOTIFY_URL,
+} from '../constants/urls';
 
 export default function Navbar() {
-  const logoSize = useBreakpointValue({ base: 30, md: 40 });
-  const NAVIGATION = [
-    { text: 'me', path: '/me' },
-    // { text: 'projects', path: '/projects' },
-    // { text: 'posts', path: '/posts' },
-    { text: 'music', path: '/music' },
-    { text: 'garden', path: '/garden' },
-    { text: 'superheroes', path: '/superheroes' },
-  ];
+  const logoSize = useBreakpointValue({ base: 40, md: 50 });
 
   return (
-    <Flex flexDir={{ base: 'row', md: 'column' }} alignItems="center" mb="3rem">
-      <Box mb={{ base: 0, md: '2rem' }} mr={{ base: '2rem', md: 0 }}>
-        <NextLink href="/" passHref>
-          <ChakraLink>
+    <Flex flexDir="row" alignItems="center" mb="3rem">
+      {/* Logo + name */}
+      <NextLink href="/" passHref>
+        <ChakraLink>
+          <Flex flexDir="row" alignItems="center">
             <Image
               src={logo}
               alt="two pink curly braces"
               width={logoSize}
               height={logoSize}
             />
-          </ChakraLink>
-        </NextLink>
-      </Box>
-      <Stack
-        direction={{ base: 'row', md: 'column' }}
-        spacing={{ base: '1rem', md: 0 }}
-      >
-        {NAVIGATION.map(({ text, path }) => (
-          <Link key={path} text={text} path={path} />
-        ))}
+            <Text
+              fontSize="2.5rem"
+              ml="3"
+              letterSpacing="-0.2rem"
+              color={PRIMARY_ACCENT}
+              _hover={{
+                textDecoration: 'none',
+              }}
+            >
+              Renzo Ledesma
+            </Text>
+          </Flex>
+        </ChakraLink>
+      </NextLink>
+
+      <Spacer />
+
+      {/* Navigation */}
+      <Stack direction={{ base: 'column', md: 'row' }} spacing="1rem">
+        <Link text="me" path="/me" />
+        <Hoverable color="gray" isLink externalHref={GITHUB_URL}>
+          github
+        </Hoverable>
+        <Hoverable color={TECH} isLink externalHref={LINKEDIN_URL}>
+          linkedin
+        </Hoverable>
+        <Hoverable color={INSTAGRAM} isLink externalHref={INSTAGRAM_URL}>
+          instagram
+        </Hoverable>
       </Stack>
     </Flex>
   );
