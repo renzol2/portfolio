@@ -33,7 +33,7 @@ const mdxComponents = {
       as="h2"
       size="2xl"
       color="black"
-      letterSpacing="-0.28rem"
+      letterSpacing={{ base: '-0.15rem', md: '-0.28rem' }}
       mx={TEXT_SIDE_MARGINS}
       pt="2rem"
       pb="0.5rem"
@@ -75,6 +75,7 @@ const mdxComponents = {
   li: (props: any) => (
     <ListItem
       mx={TEXT_SIDE_MARGINS}
+      color={TEXT}
       _selection={{
         background: HIGHLIGHT_COLOR,
       }}
