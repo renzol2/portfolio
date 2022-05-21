@@ -5,7 +5,13 @@ import Socials from './Socials';
 
 const Footer = () => {
   return (
-    <Flex flexDir={{ base: 'column-reverse', lg: 'row' }} alignItems="center" py="2rem">
+    <Flex
+      flexDir={{ base: 'column-reverse', lg: 'row' }}
+      alignItems="center"
+      pb="2rem"
+      pt="10rem"
+      w="100%"
+    >
       <Hoverable
         isLink
         isExternal="false"

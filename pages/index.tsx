@@ -19,6 +19,21 @@ const PROJECTS = [
     alt: 'Superheroes',
     href: '/superheroes',
   },
+  {
+    imgSrc: '/images/fact.png',
+    alt: 'FACT',
+    href: '/fact',
+  },
+  {
+    imgSrc: '/images/out_of_time.png',
+    alt: 'Out of Time',
+    href: '/out-of-time',
+  },
+  {
+    imgSrc: '/images/kapit_bisig.png',
+    alt: 'Kapit Bisig',
+    href: '/kapit-bisig',
+  },
 ];
 
 const Home: NextPage = () => {

@@ -18,7 +18,7 @@ export default function Page({
         <meta name="description" content="i write code and music :)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex flexDir="column" minH="100vh" px="2.5%" pt="2%">
+      <Flex flexDir="column" alignItems="center" minH="100vh" px="2.5%" pt="2%">
         <Navbar />
         {children}
         <Spacer />

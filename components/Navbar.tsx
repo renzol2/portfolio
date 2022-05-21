@@ -23,7 +23,7 @@ export default function Navbar() {
   const logoSize = useBreakpointValue({ base: 40, md: 50 });
 
   return (
-    <Flex flexDir="row" alignItems="center" mb="1rem">
+    <Flex flexDir="row" alignItems="center" mb="1rem" w="100%">
       {/* Logo + name */}
       <NextLink href="/" passHref>
         <ChakraLink>
