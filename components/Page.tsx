@@ -17,7 +17,7 @@ export default function Page({
         <meta name="description" content="i write code and music :)" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box px={{ base: '7%', md: '2.5%' }} pt={{ base: '5%', md: '2%' }}>
+      <Box px="2.5%" pt="2%">
         <Navbar />
         {children}
       </Box>

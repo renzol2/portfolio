@@ -12,18 +12,13 @@ import Image from 'next/image';
 import logo from '../public/assets/logo.svg';
 import Hoverable from './Hoverable';
 import { INSTAGRAM, MUSIC, PRIMARY_ACCENT, TECH } from '../theme/colors';
-import {
-  GITHUB_URL,
-  INSTAGRAM_URL,
-  LINKEDIN_URL,
-  SPOTIFY_URL,
-} from '../constants/urls';
+import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from '../constants/urls';
 
 export default function Navbar() {
   const logoSize = useBreakpointValue({ base: 40, md: 50 });
 
   return (
-    <Flex flexDir="row" alignItems="center" mb="3rem">
+    <Flex flexDir="row" alignItems="center" mb="1rem">
       {/* Logo + name */}
       <NextLink href="/" passHref>
         <ChakraLink>

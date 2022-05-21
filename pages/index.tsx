@@ -1,16 +1,19 @@
-import { Box, SimpleGrid } from '@chakra-ui/react';
+import { Box, SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Page from '../components/Page';
+import ProjectPreview from '../components/ProjectPreview';
+
+const PROJECTS = Array(9).fill(0);
 
 const Home: NextPage = () => {
+  const columns = useBreakpointValue({ base: 1, lg: 3 });
+
   return (
     <Page>
-      <SimpleGrid columns={3} spacing="1rem">
-        {Array(9)
-          .fill(0)
-          .map((x, i) => (
-            <Box bg="tomato" height="28rem" key={i} />
-          ))}
+      <SimpleGrid columns={columns} spacing="1rem">
+        {PROJECTS.map((_, i) => (
+          <ProjectPreview key={i} />
+        ))}
       </SimpleGrid>
     </Page>
   );
