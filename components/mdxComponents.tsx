@@ -79,6 +79,16 @@ const mdxComponents = {
       {...props}
     />
   ),
+  em: (props: any) => (
+    <Text
+      as="em"
+      _selection={{
+        background: HIGHLIGHT_COLOR,
+      }}
+      fontStyle="italic"
+      {...props}
+    />
+  ),
   ul: UnorderedList,
   ol: OrderedList,
   li: (props: any) => (
