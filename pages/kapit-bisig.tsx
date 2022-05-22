@@ -3,25 +3,25 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import mdxComponents from '../components/mdxComponents';
 import Page from '../components/Page';
-import GardenContent from '../content/garden.mdx';
+import KapitBisigContent from '../content/kapit-bisig.mdx';
 
-const Garden: NextPage = () => {
-  const IMAGE_SOURCE = '/images/digital_garden.png';
+const KapitBisig: NextPage = () => {
+  const IMAGE_SOURCE = '/images/kapit_bisig.png';
   return (
     <Page>
       <Box w="100%">
         <Image
           src={IMAGE_SOURCE}
-          alt="Digital Garden"
-          width={1920}
+          alt="Kapit Bisig"
+          width={1896}
           height={1080}
           placeholder="blur"
           blurDataURL={IMAGE_SOURCE}
         />
-        <GardenContent components={mdxComponents} />
+        <KapitBisigContent components={mdxComponents} />
       </Box>
     </Page>
   );
 };
 
-export default Garden;
+export default KapitBisig;

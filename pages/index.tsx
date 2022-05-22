@@ -1,47 +1,51 @@
+import { SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
 import type { NextPage } from 'next';
-import Hoverable from '../components/Hoverable';
 import Page from '../components/Page';
-import Paragraph from '../components/Paragraph';
-import { INSTAGRAM_URL, LINKEDIN_URL, SPOTIFY_URL } from '../constants/urls';
-import { INSTAGRAM, TECH, MUSIC } from '../theme/colors';
+import ProjectPreview from '../components/ProjectPreview';
+
+const PROJECTS = [
+  {
+    imgSrc: '/images/kapit_bisig.png',
+    alt: 'Kapit Bisig',
+    href: '/kapit-bisig',
+  },
+  {
+    imgSrc: '/images/digital_garden.png',
+    alt: 'Digital Garden',
+    href: '/garden',
+  },
+  {
+    imgSrc: '/images/fact.png',
+    alt: 'FACT',
+    href: '/fact',
+  },
+  {
+    imgSrc: '/images/superheroes.png',
+    alt: 'Superheroes',
+    href: '/superheroes',
+  },
+  {
+    imgSrc: '/images/out_of_time.png',
+    alt: 'Out of Time',
+    href: '/out-of-time',
+  },
+  {
+    imgSrc: '/images/pan_lang.png',
+    alt: 'Pan Lang',
+    href: '/pan-lang',
+  },
+];
 
 const Home: NextPage = () => {
+  const columns = useBreakpointValue({ base: 1, lg: 3 });
+
   return (
     <Page>
-      <Paragraph useMarginAbove={false}>hi i&apos;m renzo :)</Paragraph>
-      <Paragraph useMarginAbove={false}>i write code and music 🌱</Paragraph>
-      <Hoverable
-        color="gray"
-        props={{ mr: 3 }}
-        isLink
-        externalHref="https://github.com/renzol2"
-      >
-        github
-      </Hoverable>
-      <Hoverable
-        color={TECH}
-        props={{ mr: 3 }}
-        isLink
-        externalHref={LINKEDIN_URL}
-      >
-        linkedin
-      </Hoverable>
-      <Hoverable
-        color={INSTAGRAM}
-        props={{ mr: 3 }}
-        isLink
-        externalHref={INSTAGRAM_URL}
-      >
-        instagram
-      </Hoverable>
-      <Hoverable
-        color={MUSIC}
-        props={{ mr: 3 }}
-        isLink
-        externalHref={SPOTIFY_URL}
-      >
-        spotify
-      </Hoverable>
+      <SimpleGrid columns={columns} spacing="1rem">
+        {PROJECTS.map(({ imgSrc, href }, i) => (
+          <ProjectPreview key={i} imgSrc={imgSrc} href={href} />
+        ))}
+      </SimpleGrid>
     </Page>
   );
 };

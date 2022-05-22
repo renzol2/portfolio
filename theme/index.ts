@@ -16,7 +16,6 @@ const theme = extendTheme({
   },
   fonts: {
     heading: 'sans-serif',
-    body: 'sans-serif',
   },
   colors: {
     accent: {

@@ -2,24 +2,23 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import mdxComponents from '../components/mdxComponents';
 import Page from '../components/Page';
-import SuperheroesContent from '../content/superheroes.mdx';
+import PanLangContent from '../content/pan-lang.mdx';
 
-const Superheroes: NextPage = () => {
-  const IMAGE_SOURCE = '/images/superheroes.png';
-
+const PanLang: NextPage = () => {
+  const IMAGE_SOURCE = '/images/pan_lang.png';
   return (
     <Page>
       <Image
         src={IMAGE_SOURCE}
-        alt="Superheroes"
+        alt="Pan-Lang logo"
         width={1896}
         height={1080}
         placeholder="blur"
         blurDataURL={IMAGE_SOURCE}
       />
-      <SuperheroesContent components={mdxComponents} />
+      <PanLangContent components={mdxComponents} />
     </Page>
   );
 };
 
-export default Superheroes;
+export default PanLang;
