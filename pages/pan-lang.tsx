@@ -7,7 +7,7 @@ import PanLangContent from '../content/pan-lang.mdx';
 const PanLang: NextPage = () => {
   const IMAGE_SOURCE = '/images/pan_lang.png';
   return (
-    <Page>
+    <Page title="Pan-Lang | renzo ledesma">
       <Image
         src={IMAGE_SOURCE}
         alt="Pan-Lang logo"

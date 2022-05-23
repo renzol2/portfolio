@@ -8,7 +8,7 @@ import KapitBisigContent from '../content/kapit-bisig.mdx';
 const KapitBisig: NextPage = () => {
   const IMAGE_SOURCE = '/images/kapit_bisig.png';
   return (
-    <Page>
+    <Page title="Kapit Bisig | renzo ledesma">
       <Box w="100%">
         <Image
           src={IMAGE_SOURCE}

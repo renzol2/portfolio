@@ -8,7 +8,7 @@ import FactContent from '../content/fact.mdx';
 const Fact: NextPage = () => {
   const IMAGE_SOURCE = '/images/fact.png';
   return (
-    <Page>
+    <Page title="FACT 2021 | renzo ledesma">
       <Box w="100%">
         <Image
           src={IMAGE_SOURCE}

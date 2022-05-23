@@ -8,7 +8,7 @@ const Superheroes: NextPage = () => {
   const IMAGE_SOURCE = '/images/superheroes.png';
 
   return (
-    <Page>
+    <Page title="The State of Asian Superheroes in Comics | renzo ledesma">
       <Image
         src={IMAGE_SOURCE}
         alt="Superheroes"

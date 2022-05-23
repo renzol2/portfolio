@@ -8,7 +8,7 @@ import OutOfTimeContent from '../content/out-of-time.mdx';
 const OutOfTime: NextPage = () => {
   const IMAGE_SOURCE = '/images/out_of_time.png';
   return (
-    <Page>
+    <Page title="Out of Time | renzo ledesma">
       <Image
         src={IMAGE_SOURCE}
         alt="Out of Time"

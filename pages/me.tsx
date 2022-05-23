@@ -6,7 +6,7 @@ import Me from '../content/me.mdx';
 
 const About: NextPage = () => {
   return (
-    <Page>
+    <Page title="me | renzo ledesma">
       <Box w="100%">
         <Me components={mdxComponents} />
       </Box>

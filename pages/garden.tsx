@@ -8,7 +8,7 @@ import GardenContent from '../content/garden.mdx';
 const Garden: NextPage = () => {
   const IMAGE_SOURCE = '/images/digital_garden.png';
   return (
-    <Page>
+    <Page title="Digital Garden | renzo ledesma">
       <Box w="100%">
         <Image
           src={IMAGE_SOURCE}
