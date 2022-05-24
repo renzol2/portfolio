@@ -13,6 +13,8 @@ const ProjectPreview = ({ imgSrc, href }: { imgSrc: string; href: string }) => (
           transition: 'opacity 0.2s',
           opacity: 0.7,
         }}
+        boxShadow="lg"
+        borderRadius={2}
       />
     </a>
   </NextLink>
