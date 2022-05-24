@@ -7,7 +7,7 @@ import MusicContent from '../content/music.mdx';
 const Music: NextPage = () => {
   return (
     <Page title="music | renzo ledesma">
-      <Box w="100%">
+      <Box w="100%" flexDir="column" alignItems="center">
         <MusicContent components={mdxComponents} />
       </Box>
     </Page>
