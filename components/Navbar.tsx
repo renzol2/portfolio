@@ -39,7 +39,7 @@ export default function Navbar() {
             />
             <Heading
               fontWeight="light"
-              fontSize={{ base: '2rem', md: '2.5rem' }}
+              fontSize={{ base: '2rem', md: '2.4rem' }}
               ml="3"
               letterSpacing="-0.2rem"
               color={PRIMARY_ACCENT}
