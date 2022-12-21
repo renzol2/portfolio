@@ -15,8 +15,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `'Helvetica', sans-serif`,
-    body: `'Helvetica', sans-serif`,
+    heading: `'Sora', sans-serif`,
+    body: `'Sora', sans-serif`,
   },
   colors: {
     accent: {
