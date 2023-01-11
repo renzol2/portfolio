@@ -1,3 +1,13 @@
+import ProjectPageLayout from '../components/ProjectPageLayout.tsx';
+
+export const meta = {
+    title: 'Pan-Lang',
+    imageSource: '/images/pan_lang.png',
+    imageAlt: 'Pan-Lang logo',
+    imageWidth: 1896,
+    imageHeight: 1080
+}
+
 # Pan-Lang
 
 ### Food Pantry Management | PYGHACK 2020
@@ -17,3 +27,5 @@ My CS+Music colleagues and I developed Pan-Lang using React, Express.js, Socket.
 Food insecurity is an important issue in the Champaign County community. Nearly 15% of residents must deal with food insecurity. Many of these individuals are also ineligible for federal nutrition programs and must rely on local food pantries for meals.
 
 On top of this, many of these individuals speak limited English, making it difficult for them to communicate their needs to food pantry staff. With Pan-Lang, our mission is to break this language barrier and provide a more efficient method of supporting those in need.
+
+export default ({ children }) => <ProjectPageLayout meta={meta}>{children}</ProjectPageLayout>

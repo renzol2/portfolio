@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { Heading, SimpleGrid } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Page from '../components/Page';
 import ProjectPreview from '../components/ProjectPreview';
@@ -40,8 +40,8 @@ const Home: NextPage = () => {
   return (
     <Page>
       <SimpleGrid columns={{ base: 1, lg: 3 }} spacing="1rem">
-        {PROJECTS.map(({ imgSrc, href }, i) => (
-          <ProjectPreview key={i} imgSrc={imgSrc} href={href} />
+        {PROJECTS.map(({ imgSrc, href, alt }, i) => (
+          <ProjectPreview key={i} imgSrc={imgSrc} href={href} alt={alt} />
         ))}
       </SimpleGrid>
     </Page>

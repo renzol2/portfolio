@@ -29,19 +29,19 @@ const Socials = ({ showDropdownOnMobile = true }) => {
           bg="blackAlpha.300"
         />
         <MenuList borderRadius={0}>
-          <NextLink href="/me">
+          <NextLink href="/me" legacyBehavior>
             <MenuItem>me</MenuItem>
           </NextLink>
-          <NextLink href="/music">
+          <NextLink href="/music" legacyBehavior>
             <MenuItem>music</MenuItem>
           </NextLink>
-          <NextLink href={GITHUB_URL}>
+          <NextLink href={GITHUB_URL} legacyBehavior>
             <MenuItem>github</MenuItem>
           </NextLink>
-          <NextLink href={LINKEDIN_URL}>
+          <NextLink href={LINKEDIN_URL} legacyBehavior>
             <MenuItem>linkedin</MenuItem>
           </NextLink>
-          <NextLink href={INSTAGRAM_URL}>
+          <NextLink href={INSTAGRAM_URL} legacyBehavior>
             <MenuItem>instagram</MenuItem>
           </NextLink>
         </MenuList>

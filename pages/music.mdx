@@ -1,4 +1,9 @@
 import EmbeddedPlaylists from '../components/EmbeddedPlaylists';
+import ProjectPageLayout from '../components/ProjectPageLayout.tsx';
+
+export const meta = {
+    title: 'music',
+}
 
 # i have no idea what i'm doing. 🐸
 
@@ -24,3 +29,5 @@ Below are some playlists/compilations for convenience of listening:
 6. `2017-2019`: Instrumental tracks produced as part of the **Music Technology Center** of the Illinois Mathematics and Science Academy Student Productions (ISP) team
 
 <EmbeddedPlaylists />
+
+export default ({ children }) => <ProjectPageLayout meta={meta}>{children}</ProjectPageLayout>

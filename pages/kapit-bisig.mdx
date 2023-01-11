@@ -1,12 +1,24 @@
+import ProjectPageLayout from '../components/ProjectPageLayout.tsx';
+
+export const meta = {
+    title: 'Kapit Bisig',
+    imageSource: '/images/kapit_bisig.png',
+    imageAlt: 'Art from our zine for Filipino Cultural Night 2022, titled Kapit Bisig.',
+    imageWidth: 1896,
+    imageHeight: 1080
+}
+
 # 'Kapit Bisig' | Together in Unity
 
 ### Co-Coordinator
 
 Throughout the 2021-2022 academic year, I was **Filipino Culture Night (FCN) 2022 Co-Coordinator** for the [Philippine Student Association UIUC](https://psauiuc.org/) alongside my co-chair Abbie Mondala. Our theme was _Kapit Bisig_, literally meaning 'holding hands together'. By bringing together the PSA and greater UIUC community for a celebration of Filipino and Asian/Asian-American culture, we aimed to highlight the diversity of not only the Asian/Asian-American community on campus, but also the Filipino/Filipino-American community and the ways in which we celebrate our culture, while also cementing our solidarity and support towards groups in the Philippines struggling with typhoon relief.
 
-At the end of the school year, I organized and produced a [zine/booklet](https://drive.google.com/file/d/1A1YwKbkzxPjnZ6AFhJskcXxnJhPhMT0z/view) with contributions from the PSA Community. This collaborative project is a small but powerful collection of art and poetry celebrating Filipino/Filipino-American culture, and I am greatly indebted to the artists & writers of PSA for their amazing work.
+At the end of the school year, I organized and produced a [zine/booklet](https://drive.google.com/file/d/1A1YwKbkzxPjnZ6AFhJskcXxnJhPhMT0z/view) with contributions from the PSA Community. This collaborative project is a small but powerful collection of art and poetry celebrating Filipino/Filipino-American culture, and I am greatly indebted to the artists & writers of PSA for their amazing work. Their accounts are linked below:
 
 - [@ariannaua](https://instagram.com/ariannaua)
 - [@str4wberry_jam](https://www.instagram.com/str4wberry_jam/) (my ading 🙌🏼💚)
 - [@ypartistry](https://www.instagram.com/ypartistry/)
 - [@samaniego__](https://www.instagram.com/samaniego__/)
+
+export default ({ children }) => <ProjectPageLayout meta={meta}>{children}</ProjectPageLayout>

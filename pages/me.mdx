@@ -8,6 +8,11 @@ import {
   PAYLOCITY_ORANGE,
 } from '../theme/colors';
 import { LINKEDIN_URL } from '../constants/urls';
+import ProjectPageLayout from '../components/ProjectPageLayout.tsx';
+
+export const meta = {
+    title: 'me',
+}
 
 # 🐸
 
@@ -44,3 +49,5 @@ although I've also done some [music](/music) things too:
 Feel free to reach out to me at [renzomledesma@gmail.com](mailto:renzomledesma@gmail.com) or [LinkedIn](https://www.linkedin.com/in/renzo-marc-ledesma/)!
 
 For now, please email me for my resume.
+
+export default ({ children }) => <ProjectPageLayout meta={meta}>{children}</ProjectPageLayout>
