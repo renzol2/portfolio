@@ -5,7 +5,7 @@ import logo from '../public/assets/logo.svg';
 
 export default function Logo() {
   return (
-    <Link href="/" passHref>
+    <Link href="/" passHref legacyBehavior>
       <ChakraLink>
         <Image src={logo} alt="logo" blurDataURL={logo} />
       </ChakraLink>

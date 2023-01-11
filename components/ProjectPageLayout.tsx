@@ -32,8 +32,8 @@ const ProjectPageLayout = ({ meta, children }: ProjectPageLayoutProps) => {
               blurDataURL={imageSource}
             />
           )}
+        {children}
       </Box>
-      {children}
     </Page>
   );
 };

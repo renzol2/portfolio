@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <Flex flexDir="row" alignItems="center" mb="1rem" w="100%">
       {/* Logo + name */}
-      <NextLink href="/" passHref>
+      <NextLink href="/" passHref legacyBehavior>
         <ChakraLink _hover={{
           textDecor: 'none'
         }}>

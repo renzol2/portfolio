@@ -14,7 +14,7 @@ interface LinkProps {
 
 export default function Link({ text, path, props }: LinkProps) {
   return (
-    <NextLink key={path} href={path} passHref>
+    <NextLink key={path} href={path} passHref legacyBehavior>
       <ChakraLink
         color={TEXT}
         textDecoration="none"
