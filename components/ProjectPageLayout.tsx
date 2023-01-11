@@ -20,16 +20,18 @@ const ProjectPageLayout = ({ meta, children }: ProjectPageLayoutProps) => {
   return (
     <Page title={`${title} | renzo ledesma`}>
       <Box w="100%">
-        {imageSource !== undefined && (
-          <Image
-            src={imageSource}
-            alt={imageAlt}
-            width={imageWidth}
-            height={imageHeight}
-            placeholder="blur"
-            blurDataURL={imageSource}
-          />
-        )}
+        {imageSource !== undefined &&
+          imageAlt !== undefined &&
+          imageWidth !== undefined &&
+          imageHeight !== undefined && (
+            <Image
+              src={imageSource}
+              alt={imageAlt}
+              width={imageWidth}
+              height={imageHeight}
+              blurDataURL={imageSource}
+            />
+          )}
       </Box>
       {children}
     </Page>
