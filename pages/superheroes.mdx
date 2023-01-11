@@ -1,3 +1,13 @@
+import ProjectPageLayout from '../components/ProjectPageLayout.tsx';
+
+export const meta = {
+    title: 'The State of Asian Superheroes in Comics',
+    imageSource: '/images/superheroes.png',
+    imageAlt: 'Superheroes',
+    imageWidth: 1896,
+    imageHeight: 1080
+}
+
 # The State of Asian Superheroes in Comics
 
 ### Data-Driven Article | IS 390
@@ -7,3 +17,5 @@ During the Spring 2021 semester, I wrote an interactive data article titled ["Th
 Special thanks to [Professor Carol Tilley](https://ischool.illinois.edu/people/carol-tilley) for the guidance and support throughout that semester. The source code for this project is in my old portfolio website, found in [this GitHub repository](https://github.com/renzol2/renzol2.github.io/). I also have a small [slide deck](https://docs.google.com/presentation/d/1Jv7oxs1wlogUnCZnL0akRHztFJqwD0rs-CdTJnm34_I/edit?usp=sharing) as part of my final submission.
 
 Note: the web page is a little buggy and isn't very good on mobile. I'll likely move it to this portfolio page directly once I have time!
+
+export default ({ children }) => <ProjectPageLayout meta={meta}>{children}</ProjectPageLayout>

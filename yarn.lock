@@ -824,6 +824,14 @@
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
+"@mdx-js/react@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.2.1.tgz#5a70592418d52b1b01538c37e795034601c96ec5"
+  integrity sha512-YdXcMcEnqZhzql98RNrqYo9cEhTTesBiCclEtoiQUbJwx87q9453GTapYU6kJ8ZZ2ek1Vp25SiAXEFy5O/eAPw==
+  dependencies:
+    "@types/mdx" "^2.0.0"
+    "@types/react" ">=16"
+
 "@next/env@12.1.0":
   version "12.1.0"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.1.0.tgz#73713399399b34aa5a01771fb73272b55b22c314"
@@ -835,6 +843,13 @@
   integrity sha512-xk7eMjw4+roWWR/0ETIoToCNs2wdvCGgQUiUO390Rj33/82yxZsh+ODRSaFWkiKp8zHWQN5GCW+U5pfjt/gyQg==
   dependencies:
     glob "7.1.7"
+
+"@next/mdx@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-13.1.1.tgz#ca3daf4903a97af65b994d87da342395e488f349"
+  integrity sha512-a588olt++s7vcuhlgrNOBpZUqlbr9vr94NjA3ixM9AgL8fnwJ/GgxEMsrcsp2gPw91lzBlumBfjK6Lc3k3m23Q==
+  dependencies:
+    source-map "^0.7.0"
 
 "@next/swc-android-arm64@12.1.0":
   version "12.1.0"
@@ -1035,6 +1050,15 @@
   version "17.0.37"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.37.tgz#6884d0aa402605935c397ae689deed115caad959"
   integrity sha512-2FS1oTqBGcH/s0E+CjrCCR9+JMpsu9b69RTFO+40ua43ZqP5MmQ4iUde/dMjWR909KxZwmOQIFq6AV6NjEG5xg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@>=16":
+  version "18.0.26"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.26.tgz#8ad59fc01fef8eaf5c74f4ea392621749f0b7917"
+  integrity sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"

@@ -1,0 +1,59 @@
+import ProjectPageLayout from '../components/ProjectPageLayout.tsx';
+import { Box } from '@chakra-ui/react';
+
+export const meta = {
+    title: 'Out of Time',
+    imageSource: '/images/out_of_time.png',
+    imageAlt: 'Out of Time movie poster',
+    imageWidth: 1920,
+    imageHeight: 999
+}
+
+# Out of Time
+
+### OST Composer
+
+[Film](https://www.youtube.com/watch?v=2zm6m2Zlabc) | [Soundtrack](https://soundcloud.com/user-967986463/sets/out-of-time-soundtrack) | [16feet Media](https://www.16feetmedia.com)
+
+I composed and produced the soundtrack alongside [Kevin Zhou](https://www.linkedin.com/in/kevin-zhou-b092091b7/) for the short film _Out of Time_ (2021), produced by 16feet Media.
+
+**Synopsis**: A medieval knight named Percival Vain (Jeremy Poynton) is transported to modern-day USA. With no way home, he helps a young woman investigate the disappearance of her brother. Unraveling clues, the knight begins to suspect that he isn't the only one out of time.
+
+<Box w={{ base: '90%', md: '60%' }} my="2rem">
+    <iframe
+        width="100%"
+        height="450"
+        scrolling="no"
+        frameBorder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1298875126&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    ></iframe>
+    <div
+        style={{
+        fontSize: '10px',
+        color: '#CCCCCC',
+        lineBreak: 'anywhere',
+        wordBreak: 'normal',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        textOverflow: 'ellipsis',
+        fontFamily: 'sans-serif',
+        fontWeight: '100',
+        }}
+    >
+        <a
+        href="https://soundcloud.com/user-967986463/sets/out-of-time-soundtrack"
+        title="Out Of Time Soundtrack"
+        target="_blank"
+        style={{
+            color: '#CCCCCC',
+            textDecoration: 'none',
+        }}
+        rel="noreferrer"
+        >
+        Out Of Time Soundtrack
+        </a>
+    </div>
+</Box>
+
+export default ({ children }) => <ProjectPageLayout meta={meta}>{children}</ProjectPageLayout>
