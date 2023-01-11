@@ -1,4 +1,4 @@
-import { SimpleGrid } from '@chakra-ui/react';
+import { Heading, SimpleGrid } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import Page from '../components/Page';
 import ProjectPreview from '../components/ProjectPreview';
