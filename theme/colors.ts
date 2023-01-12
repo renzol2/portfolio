@@ -1,4 +1,4 @@
-export const HIGHLIGHT_COLOR = '#CE8BAE';
+export const HIGHLIGHT_COLOR = '#e0a4c3';
 export const PRIMARY_ACCENT = '#D60270';
 export const NEUTRAL = '#8F8F8F';
 export const TEXT = '#404040';

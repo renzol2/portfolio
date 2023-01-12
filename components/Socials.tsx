@@ -42,7 +42,7 @@ const Socials = ({ showDropdownOnMobile = true }) => {
             <MenuItem>linkedin</MenuItem>
           </NextLink>
           <NextLink href={INSTAGRAM_URL} legacyBehavior>
-            <MenuItem>instagram</MenuItem>
+            <MenuItem>insta</MenuItem>
           </NextLink>
         </MenuList>
       </Menu>
@@ -60,7 +60,7 @@ const Socials = ({ showDropdownOnMobile = true }) => {
         linkedin
       </Hoverable>
       <Hoverable color={INSTAGRAM} isLink href={INSTAGRAM_URL}>
-        instagram
+        insta
       </Hoverable>
     </Stack>
   );

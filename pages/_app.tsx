@@ -1,19 +1,20 @@
-import '@fontsource/sora';
-import type { AppProps } from 'next/app';
-import { ChakraProvider } from '@chakra-ui/react';
-import theme from '../theme';
+import "@fontsource/sora";
+import type { AppProps } from "next/app";
+import { ChakraProvider, Highlight } from "@chakra-ui/react";
+import theme from "../theme";
 import {
   Text,
   UnorderedList,
   OrderedList,
   ListItem,
   Heading,
-} from '@chakra-ui/react';
-import Hoverable from '../components/Hoverable';
-import { HIGHLIGHT_COLOR, TEXT } from '../theme/colors';
-import { MDXProvider } from '@mdx-js/react';
+} from "@chakra-ui/react";
+import Hoverable from "../components/Hoverable";
+import { HIGHLIGHT_COLOR, TEXT } from "../theme/colors";
+import { MDXProvider } from "@mdx-js/react";
 
-const TEXT_SIDE_MARGINS = { base: '7%', lg: '25%' };
+const TEXT_SIDE_MARGINS = { base: "7%", lg: "25%" };
+const BLOCK_QUOTE_SIDE_MARGINS = { base: "12%", lg: "35%" };
 
 const components = {
   h1: (props: any) => (
@@ -37,7 +38,7 @@ const components = {
       as="h2"
       size="2xl"
       color="black"
-      letterSpacing={{ base: '-0.15rem', md: '-0.28rem' }}
+      letterSpacing={{ base: "-0.15rem", md: "-0.28rem" }}
       mx={TEXT_SIDE_MARGINS}
       pt="2rem"
       pb="0.5rem"
@@ -51,7 +52,7 @@ const components = {
   h3: (props: any) => (
     <Heading
       as="h3"
-      size="2xl"
+      size="xl"
       color="black"
       fontWeight="thin"
       letterSpacing="-0.2rem"
@@ -63,8 +64,24 @@ const components = {
       {...props}
     />
   ),
+  h4: (props: any) => (
+    <Heading
+      as="h4"
+      size="xl"
+      color="black"
+      fontWeight="thin"
+      letterSpacing="-0.2rem"
+      pt="3rem"
+      textAlign="center"
+      _selection={{
+        background: HIGHLIGHT_COLOR,
+      }}
+      {...props}
+    />
+  ),
   p: (props: any) => (
     <Text
+      fontSize="lg"
       my="0.8rem"
       mx={TEXT_SIDE_MARGINS}
       _selection={{
@@ -94,11 +111,14 @@ const components = {
       {...props}
     />
   ),
-  ul: UnorderedList,
+  ul: (props: any) => (
+    <UnorderedList fontSize="lg" {...props}/>
+  ),
   ol: OrderedList,
   li: (props: any) => (
     <ListItem
       mx={TEXT_SIDE_MARGINS}
+      my="0.7rem"
       color={TEXT}
       _selection={{
         background: HIGHLIGHT_COLOR,
