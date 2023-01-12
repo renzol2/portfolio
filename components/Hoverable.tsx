@@ -22,7 +22,7 @@ export default function Hoverable({
         background: 'black',
       }}
       href={href}
-      isExternal={isExternal}
+      // isExternal={isExternal}
       {...props}
     >
       {children}

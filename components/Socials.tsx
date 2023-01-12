@@ -35,6 +35,9 @@ const Socials = ({ showDropdownOnMobile = true }) => {
           <NextLink href="/music" legacyBehavior>
             <MenuItem>music</MenuItem>
           </NextLink>
+          <NextLink href="/writing" legacyBehavior>
+            <MenuItem>writing</MenuItem>
+          </NextLink>
           <NextLink href={GITHUB_URL} legacyBehavior>
             <MenuItem>github</MenuItem>
           </NextLink>
@@ -52,7 +55,8 @@ const Socials = ({ showDropdownOnMobile = true }) => {
   return (
     <Stack direction="row" spacing="1rem">
       <Link text="me" path="/me" />
-      <Link text="music" path="/music" />
+      <Link text="🎶" path="/music" />
+      <Link text="✍🏼" path="/writing" />
       <Hoverable color="gray" isLink href={GITHUB_URL}>
         github
       </Hoverable>

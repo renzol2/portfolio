@@ -1,0 +1,22 @@
+import Link from '../../components/Link';
+import Subtitle from '../../components/Subtitle';
+import { VStack } from '@chakra-ui/react';
+import ProjectPageLayout from '../../components/ProjectPageLayout.tsx';
+import {
+  CARGILL_GREEN,
+} from '../../theme/colors';
+
+export const meta = {
+  title: 'writing',
+}
+
+# i write sometimes
+
+i want to write more, so if you're looking here later in 2023, there better be lots of posts. otherwise, you can let me know so i force myself to write ;)
+
+## writings
+
+- <Link text="my 2022 retrospective" path="/writing/my-2022-retrospective" color={CARGILL_GREEN} /> 
+- ... nothing else 😔
+
+export default ({ children }) => <ProjectPageLayout meta={meta}>{children}</ProjectPageLayout>

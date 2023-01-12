@@ -54,7 +54,7 @@ const Home: NextPage = () => {
           fontSize: { base: "1.5rem", sm: "2rem", lg: "3.2rem" },
           lineHeight: "134%",
           mt: "0",
-          textAlign: "center",
+          textAlign: { base: 'right', lg: 'center' },
         }}
       >
         i write <Hoverable color={TECH}>code</Hoverable> and{" "}
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
       </Subtitle>
 
       {/* Hero text */}
-      <Box w={{ base: "100%", lg: "50%" }} float="right" mb="2rem">
+      <Box w={{ base: "90%", md: "60%", lg: "50%" }} float="right" mb="2rem">
         <Paragraph>
           currently a{" "}
           <chakra.span
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
           studying the intersection between music, technology, and culture.
         </Paragraph>
       </Box>
-      <SimpleGrid columns={{ base: 1, lg: 3 }} spacing="1rem">
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="1rem">
         {PROJECTS.map(({ imgSrc, href, alt }, i) => (
           <ProjectPreview key={i} imgSrc={imgSrc} href={href} alt={alt} />
         ))}

@@ -19,7 +19,7 @@ const components = {
   h1: (props: any) => (
     <Heading
       as="h1"
-      size="4xl"
+      size={{ base: "3xl", md: "4xl" }}
       color="black"
       fontWeight="black"
       letterSpacing="-0.35rem"
@@ -110,9 +110,7 @@ const components = {
       {...props}
     />
   ),
-  ul: (props: any) => (
-    <UnorderedList fontSize="lg" {...props}/>
-  ),
+  ul: (props: any) => <UnorderedList fontSize="lg" {...props} />,
   ol: OrderedList,
   li: (props: any) => (
     <ListItem

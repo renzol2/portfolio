@@ -9,17 +9,18 @@ import { HIGHLIGHT_COLOR, TEXT } from '../theme/colors';
 interface LinkProps {
   text: string;
   path: string;
+  color?: string | undefined;
   props?: ChakraLinkProps;
 }
 
-export default function Link({ text, path, props }: LinkProps) {
+export default function Link({ text, path, props, color = TEXT }: LinkProps) {
   return (
     <NextLink key={path} href={path} passHref legacyBehavior>
       <ChakraLink
-        color={TEXT}
+        color={color}
         textDecoration="none"
         _hover={{
-          color: 'gray',
+          color,
           textDecoration: 'underline wavy',
         }}
         _selection={{
