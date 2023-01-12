@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/react";
+import { Image, ScaleFade } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 const ProjectPreview = ({
@@ -11,19 +11,21 @@ const ProjectPreview = ({
   alt: string;
 }) => (
   <NextLink href={href}>
-    <Image
-      width="100%"
-      height="28rem"
-      src={imgSrc}
-      fit="cover"
-      alt={alt}
-      _hover={{
-        transition: "opacity 0.2s",
-        opacity: 0.7,
-      }}
-      boxShadow="lg"
-      borderRadius={2}
-    />
+    <ScaleFade in>
+      <Image
+        width="100%"
+        height="28rem"
+        src={imgSrc}
+        fit="cover"
+        alt={alt}
+        _hover={{
+          transition: "opacity 0.2s",
+          opacity: 0.7,
+        }}
+        boxShadow="lg"
+        borderRadius={2}
+      />
+    </ScaleFade>
   </NextLink>
 );
 

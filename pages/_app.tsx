@@ -13,8 +13,7 @@ import Hoverable from "../components/Hoverable";
 import { HIGHLIGHT_COLOR, TEXT } from "../theme/colors";
 import { MDXProvider } from "@mdx-js/react";
 
-const TEXT_SIDE_MARGINS = { base: "7%", lg: "25%" };
-const BLOCK_QUOTE_SIDE_MARGINS = { base: "12%", lg: "35%" };
+export const TEXT_SIDE_MARGINS = { base: "7%", lg: "25%" };
 
 const components = {
   h1: (props: any) => (
