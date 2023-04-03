@@ -1,0 +1,23 @@
+import { Divider } from '@chakra-ui/react';
+import WritingPageLayout from '../../components/WritingPageLayout.tsx';
+
+export const meta = {
+    title: 'fx',
+}
+
+## fx
+
+*building realtime effects*
+
+<Divider my="2rem" />
+
+As a compositional and mixing tool, **audio effects** serve both creative and functional purposes, changing the way we view music, audio, and sound as a whole. In particular, the advent of digital music-making has introduced digital tools for manipulating audio in ways that surpass the limits of analog hardware. These effects, in all their physical, analog, and digital incarnations, have heavily influenced the way that music has been produced and consumed for much of our musical history.
+
+In this project, I've implemented several fundamental audio effects from scratch in the form of plugins to be used in digital audio workstation (DAW) software and other real time audio applications. I've developed a few modular applications, each focused on a single audio effect, that I will ultimately combine into a single, powerful multi effects application.
+
+- distortion (wip)
+- reverb (wip)
+- filters (wip)
+- delay (wip)
+
+export default ({ children }) => <WritingPageLayout meta={meta}>{children}</WritingPageLayout>
