@@ -1,13 +1,23 @@
 import { Divider } from '@chakra-ui/react';
+import Hoverable from '../../components/Hoverable.tsx';
 import WritingPageLayout from '../../components/WritingPageLayout.tsx';
+import NextLink from "next/link";
+import {
+  COURSERA_BLUE,
+  PSA_MAROON,
+  CARGILL_GREEN,
+  URBANA_ORANGE,
+  PRAIRIELEARN_BLUE,
+  PAYLOCITY_ORANGE,
+} from '../../theme/colors';
 
 export const meta = {
     title: 'fx',
 }
 
-## fx
+# fx
 
-*building realtime effects*
+### *building realtime effects*
 
 <Divider my="2rem" />
 
@@ -15,7 +25,7 @@ As a compositional and mixing tool, **audio effects** serve both creative and fu
 
 In this project, I've implemented several fundamental audio effects from scratch in the form of plugins to be used in digital audio workstation (DAW) software and other real time audio applications. I've developed a few modular applications, each focused on a single audio effect, that I will ultimately combine into a single, powerful multi effects application.
 
-- distortion (wip)
+- <NextLink href="/writing/distortion"><Hoverable color={PAYLOCITY_ORANGE}>distortion (wip)</Hoverable></NextLink>
 - reverb (wip)
 - filters (wip)
 - delay (wip)

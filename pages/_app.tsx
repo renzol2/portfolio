@@ -1,6 +1,6 @@
 import "@fontsource/sora";
 import type { AppProps } from "next/app";
-import { ChakraProvider, Highlight } from "@chakra-ui/react";
+import { ChakraProvider, Highlight, Code } from "@chakra-ui/react";
 import theme from "../theme";
 import {
   Text,
@@ -55,7 +55,8 @@ const components = {
       color="black"
       fontWeight="thin"
       letterSpacing="-0.2rem"
-      pb="2rem"
+      pb="1rem"
+      pt="2.2rem"
       textAlign="center"
       _selection={{
         background: HIGHLIGHT_COLOR,
@@ -124,6 +125,8 @@ const components = {
     />
   ),
   a: (props: any) => <Hoverable externalHref={props.href} isLink {...props} />,
+  // TODO: Make this... better... and add syntax highlighting
+  code: (props: any) => <Code fontSize="lg" variant="solid" p="2rem" colorScheme="blackAlpha" borderRadius="lg" mx="20vw" {...props} />,
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
