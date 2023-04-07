@@ -1,4 +1,9 @@
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import {
+  Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import Page from "../components/Page";
@@ -30,7 +35,13 @@ const WritingPageLayout = ({ meta, children }: WritingPageLayoutProps) => {
           <BreadcrumbLink>{title}</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
-      <Box w="100%">
+      <Box
+        w="100%"
+        display="flex"
+        flexDir="column"
+        alignItems="stretch"
+        px={{ base: "7%", lg: "25%" }}
+      >
         {imageSource !== undefined &&
           imageAlt !== undefined &&
           imageWidth !== undefined &&

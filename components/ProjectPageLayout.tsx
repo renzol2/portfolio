@@ -32,7 +32,7 @@ const ProjectPageLayout = ({ meta, children }: ProjectPageLayoutProps) => {
               blurDataURL={imageSource}
             />
           )}
-        {children}
+        <Box px={{ base: "7%", lg: "25%" }}>{children}</Box>
       </Box>
     </Page>
   );

@@ -25,13 +25,15 @@ There are often three terms used for 'distortion' effects:
 
 ## Implementation
 
-Distortion effects can be described by a **characteristic curve**, i.e. a function that maps input samples to output samples. 
+Distortion effects can be described by a **characteristic curve**, i.e. a function that maps input samples to output samples. This process is often referred to as _waveshaping_, and different waveshaping curves produce different characteristics.
 
 This results in a **non-linear** system, whereas most audio effects operate under a linear system.
 
 When implemented with a characteristic curve, distortion is **time-invariant**, since output samples depend only on input samples and not the time at which they are processed.
 
 Distortion by characteristic curve is also **memoryless**, since the implementation does not require any previous or future samples - it just needs the current input sample to make the output sample.
+
+An example of a simple saturating waveshaper, written in Rust:
 
 ```rust
 /// Processes an input sample through a static, saturating waveshaper.

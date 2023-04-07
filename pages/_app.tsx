@@ -12,8 +12,12 @@ import {
 import Hoverable from "../components/Hoverable";
 import { HIGHLIGHT_COLOR, TEXT } from "../theme/colors";
 import { MDXProvider } from "@mdx-js/react";
+import SyntaxHighlighter from "../components/SyntaxHighlighter";
 
-export const TEXT_SIDE_MARGINS = { base: "7%", lg: "25%" };
+// TODO: clean up these constants
+// export const TEXT_SIDE_MARGINS = { base: "7%", lg: "25%" };
+export const TEXT_SIDE_MARGINS = "0%";
+export const TEXT_SIDE_MARGINS_NEGATIVE = { base: "-7%", lg: "-25%" };
 
 const components = {
   h1: (props: any) => (
@@ -23,6 +27,7 @@ const components = {
       color="black"
       fontWeight="black"
       letterSpacing="-0.35rem"
+      mx={TEXT_SIDE_MARGINS_NEGATIVE} // negative margins to give more width compared to body
       pt="2rem"
       pb="0.5rem"
       textAlign="center"
@@ -125,8 +130,7 @@ const components = {
     />
   ),
   a: (props: any) => <Hoverable externalHref={props.href} isLink {...props} />,
-  // TODO: Make this... better... and add syntax highlighting
-  code: (props: any) => <Code fontSize="lg" variant="solid" p="2rem" colorScheme="blackAlpha" borderRadius="lg" mx="20vw" {...props} />,
+  code: (props: any) => <SyntaxHighlighter props={props} />,
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
