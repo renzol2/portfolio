@@ -27,7 +27,7 @@ const WritingPageLayout = ({ meta, children }: WritingPageLayoutProps) => {
     <Page title={`${title} | renzo ledesma`}>
       <Breadcrumb fontSize="md" color="gray.600">
         <BreadcrumbItem>
-          <Link href="/writing" legacyBehavior>
+          <Link href="/writing" legacyBehavior passHref>
             <BreadcrumbLink>writing</BreadcrumbLink>
           </Link>
         </BreadcrumbItem>
@@ -56,6 +56,16 @@ const WritingPageLayout = ({ meta, children }: WritingPageLayoutProps) => {
           )}
         {children}
       </Box>
+      <Breadcrumb fontSize="md" color="gray.600" mt="5rem" mb="3rem">
+        <BreadcrumbItem>
+          <Link href="/writing" legacyBehavior passHref>
+            <BreadcrumbLink>writing</BreadcrumbLink>
+          </Link>
+        </BreadcrumbItem>
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink>{title}</BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
     </Page>
   );
 };
