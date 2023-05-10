@@ -1,0 +1,56 @@
+import { Divider } from "@chakra-ui/react";
+import Hoverable from "../../components/Hoverable.tsx";
+import WritingPageLayout from "../../components/WritingPageLayout.tsx";
+import NextLink from "next/link";
+import {
+  COURSERA_BLUE,
+  PSA_MAROON,
+  CARGILL_GREEN,
+  URBANA_ORANGE,
+  PRAIRIELEARN_BLUE,
+  PAYLOCITY_ORANGE,
+} from "../../theme/colors";
+
+export const meta = {
+  title: "fx",
+};
+
+# fx
+
+### _building realtime effects_
+
+<Divider my="2rem" />
+
+_**Note**: this is a work-in progress project on coding audio effects. Once you're done, come back later to see finished articles!_
+
+As a compositional and mixing tool, **audio effects** serve both creative and functional purposes, changing the way we view music, audio, and sound as a whole. In particular, the advent of digital music-making has introduced digital tools for manipulating audio in ways that surpass the limits of analog hardware. These effects, in all their physical, analog, and digital incarnations, have heavily influenced the way that music has been produced and consumed for much of our musical history.
+
+I took the past few months to deep-dive into how audio effects are made, and how I can make them myself using code. I've learned a lot in the process and I plan on writing some articles overviewing how audio effects are made.
+
+In the meantime, here are some useful resources I've found on how to make audio effects.
+
+## Filters
+
+- [ High level overview of filters (Prof. Christopher Dobrian) ](https://dobrian.github.io/cmp/topics/filters/0.index.html)
+- [ Biquad filters (EarLevel Engineering) ](https://www.earlevel.com/main/2003/02/28/biquads/)
+- [ Digital state variable filters (SVF) ](https://www.earlevel.com/main/2003/03/02/the-digital-state-variable-filter/)
+- [ Biquad filter source code (C++) ](https://www.earlevel.com/main/2012/11/26/biquad-c-source-code/)
+
+## Reverb
+
+- [ Schroeder reverberators (CCRMA) ](https://ccrma.stanford.edu/~jos/pasp/Schroeder_Reverberators.html)
+- [ Freeverb ](https://ccrma.stanford.edu/~jos/pasp/Freeverb.html)
+- [ Feedback delay network (FDN) reverbs ](https://ccrma.stanford.edu/~jos/pasp/FDN_Reverberation.html)
+- [Ian Hobson's Freeverb implementation in Rust](https://github.com/irh/freeverb-rs)
+- [Jon Dattorro's reverb design](https://ccrma.stanford.edu/~dattorro/EffectDesignPart1.pdf)
+
+## Distortion
+
+- [Warmer waveshapers (Signalsmith Audio)](https://signalsmith-audio.co.uk/writing/2022/warm-distortion/)
+- [Complex nonlinearities for audio signal processing (Jatin Chowdhury)](https://ccrma.stanford.edu/~jatin/papers/Complex_NLs.pdf)
+
+More to come, so stay tuned!
+
+export default ({ children }) => (
+  <WritingPageLayout meta={meta}>{children}</WritingPageLayout>
+);

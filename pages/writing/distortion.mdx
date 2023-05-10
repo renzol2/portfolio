@@ -1,0 +1,60 @@
+import WritingPageLayout from '../../components/WritingPageLayout.tsx';
+
+export const meta = {
+    title: 'distortion',
+}
+
+# distortion
+
+**Distortion** is an audio signal processing effect that alters the original shape of a signal. It is generally considered an artifact that is unwanted in many cases, but also wanted and even intentional in other cases, especially in music.
+
+Musically, distortion can induce tones ranging from "fuzzy", "growling",  and "gritty" to "smooth and singing" or "harsh and grungy". Distortion can be induced by running signals through an amplifier (ex. guitar amps, vacuum tube amps) or through dedicated, self-contained distortion effects.
+
+Distortion effects affect signals in various ways:
+
+- **clipping** the signal
+- compresses the dynamic range, in a way that sounds "warm" and "dirty"
+- adds sustain
+- adds harmonics and inharmonic overtones
+
+There are often three terms used for 'distortion' effects:
+
+- Overdrive: a nearly linear effect for low level signals, but increasingly nonlinear at high levels
+- Distortion: nonlinear effect on most all signal levels
+- Fuzz: nonlinear effect that creates drastic changes to input waveform; often hard or harsh sounding
+
+## Implementation
+
+Distortion effects can be described by a **characteristic curve**, i.e. a function that maps input samples to output samples. This process is often referred to as _waveshaping_, and different waveshaping curves produce different characteristics.
+
+This results in a **non-linear** system, whereas other audio effects (like some filters & delays) operate under a linear system.
+
+When implemented with a characteristic curve, distortion is **time-invariant**, since output samples depend only on input samples and not the time at which they are processed.
+
+Distortion by characteristic curve is also **memoryless**, since the implementation does not require any previous or future samples - it just needs the current input sample to make the output sample.
+
+An example of a simple saturating waveshaper, written in Rust:
+
+```rust
+/// Processes an input sample through a static, saturating waveshaper.
+/// Drive parameter increases the saturation.
+///
+/// Source: https://www.musicdsp.org/en/latest/Effects/46-waveshaper.html
+pub fn get_saturator_output(drive: f32, input_sample: f32) -> f32 {
+    let drive = drive.min(0.99);
+    let k = 2.0 * drive / (1.0 - drive);
+    let wet = ((1.0 + k) * input_sample) / (1.0 + k * (input_sample).abs());
+    // Scale gain down to maintain similar loudness as input
+    (1. - 0.3 * drive) * wet
+}
+```
+
+## Hard clipping & soft clipping
+
+Distortion effects are often categorized by whether they produce hard clipping or soft clipping.
+
+### Sources
+
+- https://en.wikipedia.org/wiki/Distortion_(music)
+
+export default ({ children }) => <WritingPageLayout meta={meta}>{children}</WritingPageLayout>

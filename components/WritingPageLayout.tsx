@@ -1,4 +1,9 @@
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+import {
+  Box,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import Page from "../components/Page";
@@ -22,7 +27,7 @@ const WritingPageLayout = ({ meta, children }: WritingPageLayoutProps) => {
     <Page title={`${title} | renzo ledesma`}>
       <Breadcrumb fontSize="md" color="gray.600">
         <BreadcrumbItem>
-          <Link href="/writing" legacyBehavior>
+          <Link href="/writing" legacyBehavior passHref>
             <BreadcrumbLink>writing</BreadcrumbLink>
           </Link>
         </BreadcrumbItem>
@@ -30,7 +35,13 @@ const WritingPageLayout = ({ meta, children }: WritingPageLayoutProps) => {
           <BreadcrumbLink>{title}</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
-      <Box w="100%">
+      <Box
+        w="100%"
+        display="flex"
+        flexDir="column"
+        alignItems="stretch"
+        px={{ base: "7%", lg: "25%" }}
+      >
         {imageSource !== undefined &&
           imageAlt !== undefined &&
           imageWidth !== undefined &&
@@ -45,6 +56,16 @@ const WritingPageLayout = ({ meta, children }: WritingPageLayoutProps) => {
           )}
         {children}
       </Box>
+      <Breadcrumb fontSize="md" color="gray.600" mt="5rem" mb="3rem">
+        <BreadcrumbItem>
+          <Link href="/writing" legacyBehavior passHref>
+            <BreadcrumbLink>writing</BreadcrumbLink>
+          </Link>
+        </BreadcrumbItem>
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink>{title}</BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
     </Page>
   );
 };
