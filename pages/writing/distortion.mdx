@@ -21,13 +21,13 @@ There are often three terms used for 'distortion' effects:
 
 - Overdrive: a nearly linear effect for low level signals, but increasingly nonlinear at high levels
 - Distortion: nonlinear effect on most all signal levels
-- Fuzz: complete nonlinear effect that creates drastic changes to input waveform; often hard or harsh sounding
+- Fuzz: nonlinear effect that creates drastic changes to input waveform; often hard or harsh sounding
 
 ## Implementation
 
 Distortion effects can be described by a **characteristic curve**, i.e. a function that maps input samples to output samples. This process is often referred to as _waveshaping_, and different waveshaping curves produce different characteristics.
 
-This results in a **non-linear** system, whereas most audio effects operate under a linear system.
+This results in a **non-linear** system, whereas other audio effects (like some filters & delays) operate under a linear system.
 
 When implemented with a characteristic curve, distortion is **time-invariant**, since output samples depend only on input samples and not the time at which they are processed.
 
