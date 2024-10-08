@@ -10,8 +10,8 @@ export default function Title({ text }: { text: string }) {
   const HEADER_SIZE = {
     base: '4rem',
     sm: '5.8rem',
-    md: '8rem',
-    lg: '9.5rem',
+    md: '6rem',
+    lg: '7.5rem',
   };
   return (
     <>
