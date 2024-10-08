@@ -5,6 +5,7 @@ import Hoverable from "../components/Hoverable";
 import Page from "../components/Page";
 import Paragraph from "../components/Paragraph";
 import ProjectPreview from "../components/ProjectPreview";
+import Link from "../components/Link";
 import Subtitle from "../components/Subtitle";
 import Title from "../components/Title";
 import { MUSIC, PRIMARY_ACCENT, TECH } from "../theme/colors";
@@ -45,53 +46,37 @@ const PROJECTS = [
 const Home: NextPage = () => {
   return (
     <Page>
-      <Title text="renzo ledesma" />
+      <Title text="renzofrog" />
 
       {/* Subtitle */}
       <Subtitle
         props={{
           w: { base: "100%", lg: "70%" },
-          fontSize: { base: "1.5rem", sm: "2rem", lg: "3.2rem" },
+          fontSize: { base: "1.5rem", sm: "2rem", lg: "2.3rem" },
           lineHeight: "134%",
-          mt: "0",
-          textAlign: { base: 'right', lg: 'center' },
+          mt: "1",
+          textAlign: { base: 'center' },
         }}
       >
-        i write <Hoverable color={TECH}>code</Hoverable> and{" "}
+        writing <Hoverable color={TECH}>code</Hoverable> and{" "}
         <Hoverable color={MUSIC}>music</Hoverable> 🌱
       </Subtitle>
 
       {/* Hero text */}
-      <Box w={{ base: "90%", md: "60%", lg: "50%" }} float="right" mb="2rem">
+      <Box w={{ base: "70%", md: "60%", lg: "50%" }} float="right" my="2rem">
         <Paragraph>
-          currently a{" "}
-          <chakra.span
-            textDecor="underline"
-            _selection={{
-              color: "gray.100",
-              background: "black",
-            }}
-          >
-            computer science + music
-          </chakra.span>{" "}
-          major at the{" "}
-          <chakra.span
-            fontWeight="black"
-            _selection={{
-              color: "gray.100",
-              background: "black",
-            }}
-          >
-            University of Illinois at Urbana-Champaign
-          </chakra.span>{" "}
-          studying the intersection between music, technology, and culture.
+          currently a software engineer. also, making music, learning languages, and navigating the world.
         </Paragraph>
+        <Paragraph>
+         this website is a constant work in progress 🚧
+        </Paragraph>
+        <Link text="check out my latest post here." path="/writing/an-overdue-update" color={PRIMARY_ACCENT} />
       </Box>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="1rem">
+      {/* <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing="1rem">
         {PROJECTS.map(({ imgSrc, href, alt }, i) => (
           <ProjectPreview key={i} imgSrc={imgSrc} href={href} alt={alt} />
         ))}
-      </SimpleGrid>
+      </SimpleGrid>*/}
     </Page>
   );
 };

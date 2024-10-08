@@ -41,9 +41,9 @@ const Socials = ({ showDropdownOnMobile = true }) => {
           <NextLink href={GITHUB_URL} legacyBehavior>
             <MenuItem>github</MenuItem>
           </NextLink>
-          <NextLink href={LINKEDIN_URL} legacyBehavior>
+          {/* <NextLink href={LINKEDIN_URL} legacyBehavior>
             <MenuItem>linkedin</MenuItem>
-          </NextLink>
+          </NextLink> */}
           <NextLink href={INSTAGRAM_URL} legacyBehavior>
             <MenuItem>insta</MenuItem>
           </NextLink>
@@ -60,9 +60,9 @@ const Socials = ({ showDropdownOnMobile = true }) => {
       <Hoverable color="gray" isLink href={GITHUB_URL}>
         github
       </Hoverable>
-      <Hoverable color={TECH} isLink href={LINKEDIN_URL}>
+      {/* <Hoverable color={TECH} isLink href={LINKEDIN_URL}>
         linkedin
-      </Hoverable>
+      </Hoverable> */}
       <Hoverable color={INSTAGRAM} isLink href={INSTAGRAM_URL}>
         insta
       </Hoverable>
